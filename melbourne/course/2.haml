@@ -115,11 +115,22 @@ layout: default
         %input{name: "DIET", placeholder: "e.g. Vegetarian"}
 
       .form-group
-        %input{type: "checkbox"}
-        %label I can commit to the attendance requirements. 
+        %input{type: "checkbox", id: "attendance"}
+        %label I commit to the attendance requirements. 
 
       .form-group
-        %input.button{type: "submit", value: "Register my interest"}
+        %input.disabled.button{type: "submit", id: "registerButton", value: "Register my interest", disabled: true}
 
     .clearfix
+
+:javascript
+  $("#attendance").click(function() {
+    if ($(this).is(":checked")) {
+      $("#registerButton").removeAttr("disabled");
+      $("#registerButton").removeClass("disabled");
+    } else {
+      $("#registerButton").attr("disabled", true);
+      $("#registerButton").addClass("disabled");
+    }
+  });
 

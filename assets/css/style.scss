@@ -6,6 +6,7 @@ $primary-button-color: #f61f62;
 $info-button-color: #6dbb6f;
 $input-border-color: #ddd;
 $link-color: #f61f62;
+$disabled-color: #B6B6B6;
 
 $phone-screen: "only screen and (max-width: #{$screen-small})";
 $pad-screen: "only screen and (max-width: #{$screen-medium})";
@@ -255,7 +256,7 @@ section#events {
     }
 
     .finished {
-      background-color: #B6B6B6;
+      background-color: $disabled-color;
     }
 
     @media #{$pad-screen} {
@@ -389,6 +390,10 @@ form {
 
   input[type=checkbox] {
     width: 30px;
+  }
+
+  input[type=submit]:disabled {
+    background-color: $disabled-color;
   }
 
   select {
