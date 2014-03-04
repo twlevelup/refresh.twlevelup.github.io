@@ -376,6 +376,10 @@ section#testimonials {
 }
 
 
+#wide {
+  width: 380px;
+  padding-top: 15px;
+}
 
 form {
   .form-group {
@@ -387,10 +391,6 @@ form {
       margin-right: 20px;
       display: inline-block;
       text-align: right;
-
-      .wrap {
-        white-space: none;
-      }
 
       @media #{$phone-screen} {
         text-align: left;
