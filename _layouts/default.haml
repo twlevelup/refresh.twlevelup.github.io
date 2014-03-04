@@ -20,22 +20,13 @@
 
   %body
 
-    %header#navbar
-      .navbar-internal
-        .content
-          %a{:href => "/"}
-            %img{src: "/assets/images/glyph-logo.png"}
-
     {{ content }}
 
-    %footer#beard
+    .border-line
+    %footer
       %p
-        Are you passionate about world-changing software?
-
-        %a{href: 'http://www.thoughtworks.com/join'} We're hiring.
-        Read more about us at
-        %a{href: 'http://www.thoughtworks.com/'} thoughtworks.com
-
+        Stay connected with
+        %strong LevelUp
       .social-links
         %a{href: "https://twitter.com/TW_LevelUp"}
           .fa.fa-twitter
@@ -43,6 +34,10 @@
         %a{href: "https://www.facebook.com/ThoughtworksLevelUp"}
           .fa.fa-facebook
           Facebook
+      %p
+        Are you passionate about world-changing software?
+
+        %a{href: 'http://www.thoughtworks.com/join'} We're hiring.
 
       %div
         %a{href: "https://www.thoughtworks.com"}

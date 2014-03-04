@@ -48,10 +48,27 @@ section, footer, header {
   margin: 0 auto;
 }
 
-.tw {
-  max-width: 200px;
-  margin-top: 45px;
+footer {
+  padding: 0;
+  .mascot {
+    margin-bottom: 50px;
+    max-width: 200px;
+  }
+
+  .social-links {
+    margin: 15px auto;
+    padding-bottom: 30px;
+
+    a {
+      padding: 0 15px;
+    }
+  }
+  .tw {
+    max-width: 200px;
+    margin-bottom: 45px;
+  }
 }
+
 
 .border-line {
   border: 4px #f61f62 solid;
@@ -109,32 +126,47 @@ section, footer, header {
   }
 }
 
-.alt {
-  background-color: #f0f0f0;
-}
-
-h1.boom {
-  color: #464646;
-  font-size: 3em;
-  font-weight: 300;
-}
-
-#get-updates {
-  h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #999;
+#hero {
+  max-width: 100%;
+  padding: 100px 0;
+  background: pink url('/assets/images/callout-pink.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  h1.boom {
+    color: #fffc81;
+    font-size: 4em;
+    letter-spacing: -0.07em;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 1em;
+    span {
+      color: white;
+    }
   }
-
-  .details {
-    @media #{$phone-screen} {
-      padding: 10px;
-      width: 100%;
+  #get-updates {
+    h3 {
+      font-size: 1.5em;
+      font-weight: 300;
+      color: white;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 1);
     }
 
-    .sign-up {
-      top: -2px;
-      position: relative;
+    .details {
+      @media #{$phone-screen} {
+        padding: 10px;
+        width: 100%;
+      }
+
+      .sign-up {
+        top: -2px;
+        position: relative;
+      }
+    }
+  }
+  @media #{$phone-screen} {
+    h1.boom {
+      font-size: 2em;
     }
   }
 }
@@ -158,7 +190,6 @@ section#about {
   }
 }
 
-
 section#photos {
   img {
     float: left;
@@ -167,11 +198,14 @@ section#photos {
   }
 
   img.small {
-    width: 30%;
+    margin-left: 0;
+    width: 31%;
+    float: right;
   }
 
   img.large {
-    width: 60%;
+    margin-right: 0;
+    width: 63%;
   }
 }
 
@@ -326,20 +360,6 @@ section#testimonials {
   }
 }
 
-#beard {
-  .mascot {
-    margin-bottom: 50px;
-    max-width: 200px;
-  }
-
-  .social-links {
-    margin: 15px auto;
-
-    a {
-      padding: 0 15px;
-    }
-  }
-}
 
 
 form {
@@ -510,6 +530,18 @@ section#talk {
     margin-right: auto;
     width: 710px;
     text-align: left;
+
+    .speakerdeck {
+      background:transparent url('/assets/images/loading.gif') center center no-repeat;
+
+    }
+
+    .date {
+      color: darkgrey;
+      padding-left: 5px;
+      font-weight: normal;
+    }
+
   }
   
 }

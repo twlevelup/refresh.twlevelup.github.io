@@ -2,8 +2,11 @@
 layout: default
 ---
 
-%section#header
-  %h1.boom LevelUp Your Education
+%section#hero
+  %img{src: "/assets/images/glyph-logo.png"}
+  %h1.boom
+    %span LevelUp
+    Your Education
 
   %form#get-updates{action: "http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f405fabad2dd5617122558&amp;id=f7f8e45351", method: "post", name: "mc-embedded-subscribe-form"}
     %h3 Register and be the first to hear about upcoming LevelUp events
@@ -19,10 +22,8 @@ layout: default
       .form-group
         %input.sign-up.button.info-button{type: "submit", value: "Sign Up"}
 
-%section#about.alt
+%section#about
   .about-content
-    %h2 About LevelUp
-
     %p
       LevelUp is a series of classes, and conferences for students
       who want to add to their classroom learning with real-world experience.
@@ -35,7 +36,8 @@ layout: default
       weeks.
       %strong
         %em
-          LevelUp is a non-for-profit initiative, run by ThoughtWorks volunteers. 
+          LevelUp is a non-for-profit initiative, run by ThoughtWorks volunteers.
+
 
 %section#events
   %h2 Upcoming Events
