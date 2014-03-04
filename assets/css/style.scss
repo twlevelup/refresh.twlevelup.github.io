@@ -344,7 +344,6 @@ section#testimonials {
 
 form {
   .form-group {
-    white-space: nowrap;
     margin-bottom: 10px;
 
     label {
@@ -354,6 +353,10 @@ form {
       display: inline-block;
       text-align: right;
 
+      .wrap {
+        white-space: none;
+      }
+
       @media #{$phone-screen} {
         text-align: left;
         display: block;
@@ -362,7 +365,7 @@ form {
       }
     }
 
-    input, select {
+    input, select, textarea {
       width: 200px;
       max-width: 340px;
       font-size: 1em;
@@ -381,7 +384,7 @@ form {
     }
   }
 
-  input {
+  input, textarea {
     padding: 9px;
     border: 1px solid $input-border-color;
     border-radius: 3px;
