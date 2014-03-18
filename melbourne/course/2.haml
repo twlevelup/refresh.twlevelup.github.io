@@ -84,57 +84,5 @@ layout: default
     %h2 Register Your Interest
     .border-line
 
-    %form#sign-up{action: "http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f405fabad2dd5617122558&amp;id=a314b2ac3c", method: "post", name: "mc-embedded-subscribe-form"}
-      .form-group
-        %label First Name
-        %input{name: "FNAME"}
-
-      .form-group
-        %label Last Name
-        %input{name: "LNAME"}
-
-      .form-group
-        %label Email
-        %input{name: "EMAIL"}
-
-      .form-group
-        %label What are you currently studying and when do you expect to finish?
-        %textarea{name: "STUDY", placeholder: "e.g. Master of Technology, 2015"}
-
-      .form-group
-        %label Which role would you like?
-        %select#role{name: "ROLE"}
-          %option{value: "Business Analyst"} Business Analyst
-          %option{value: "Developer"} Developer
-          %option{value: "Tester"} Tester
-          %option{value: "Experience Designer"} Experience Designer
-          %option{value: "Not sure"} Not sure
-
-      .form-group
-        %label Any dietary requirements?
-        %input{name: "DIET", placeholder: "e.g. Vegetarian"}
-
-      .form-group
-        %label Tell us about your relevant experience and/or passion for your chosen role.
-        %textarea{name: "EXPERIENCE", placeholder: "e.g. I have coded the Matrix in my basement"}
-
-      .form-group
-        %input{type: "checkbox", id: "attendance"}
-        %label#wide I can commit to the attendance requirements. 
-
-      .form-group
-        %input.disabled.button{type: "submit", id: "registerButton", value: "Register interest", disabled: true}
-
-    .clearfix
-
-:javascript
-  $("#attendance").click(function() {
-    if ($(this).is(":checked")) {
-      $("#registerButton").removeAttr("disabled");
-      $("#registerButton").removeClass("disabled");
-    } else {
-      $("#registerButton").attr("disabled", true);
-      $("#registerButton").addClass("disabled");
-    }
-  });
+    %p Unforunately, registrations for this LevelUp event have closed.
 
