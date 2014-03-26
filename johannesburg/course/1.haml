@@ -42,6 +42,13 @@ layout: default
         %input{name: "EMAIL", placeholder: "Your Email"}
 
       .form-group
+        %label Gender
+        %select#role{name: "GENDER"}
+          %option{value: "Male"} Male
+          %option{value: "Female"} Female
+          %option{value: "Prefer Not to Say"} Prefer Not to Say
+
+      .form-group
         %label What role interests you the most?
         %select#role{name: "ROLE"}
           %option{value: "Business Analyst"} Business Analyst
