@@ -44,34 +44,41 @@ layout: default
   %h2 Upcoming Events
 
   .border-line
+  .upcoming-event
+    .event
+      %h4.location Johannesburg
+      %h5.name LevelUp
+      .register
+        %a.apply.apply.button{href: "/johannesburg/course/1.html"} Register now
+      .date
+        12th April 2014
 
-  .event
-    %h4.location Sydney
-    %h5.name
-      LevelUp Build:
-      %em Game of Codes
-    .register
-      %a.apply.finished.button{href: "/sydney/course/3.html"} Registrations have closed
-    .date
-      22nd March 2014
+    .event
+      %h4.location Brisbane
+      %h5.name LevelUp EXP
+      .register
+        %a.apply.apply.button{href: "/brisbane/exp/2.html"} Register now
+      .date
+        10th May 2014
 
-  .event
-    %h4.location Melbourne
-    %h5.name
-      LevelUp Build:
-      %em #HashTagTrader
-    .register
-      %a.apply.finished.button{href: "/"} Registrations have closed
-    .date
-      22nd March 2014
+  .current-event
+    %h2 Currently Running
+    .border-line
+    .event
+      %h4.location Sydney
+      %h5.name
+        LevelUp Build:
+        %em Game of Codes
+      .date
+        Start 22nd March 2014
 
-  .event
-    %h4.location Johannesburg
-    %h5.name LevelUp
-    .register
-      %a.apply.apply.button{href: "/johannesburg/course/1.html"} Register now
-    .date
-      12th April 2014
+    .event
+      %h4.location Melbourne
+      %h5.name
+        LevelUp Build:
+        %em #HashTagTrader
+      .date
+        Start 22nd March 2014
 
   .earth
     %img.earth-line{src: "./assets/images/map.png"}
