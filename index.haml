@@ -8,32 +8,31 @@ layout: default
     LevelUp
     %span Your Education
 
-  %form#get-updates{action: "http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f405fabad2dd5617122558&amp;id=f7f8e45351", method: "post", name: "mc-embedded-subscribe-form"}
-    %h3 Register and be the first to hear about upcoming LevelUp events
+  %p
+    LevelUp is a series of classes, workshops and conferences for students
+    who want to add to their classroom learning with real-world experience.
+    Topics range from test-driven development, continuous delivery and pair
+    programming to Agile project management, business analysis and how
+    employers hire grads.
 
-    .details
-      .form-group
-        %input.email{type: "email", name: "EMAIL", placeholder: "Email Address"}
-        %select{type:"drop down", name: "LOCATION"}
-          %option Sydney
-          %option Melbourne
-          %option Brisbane
-          %option Johannesburg
-      .form-group
-        %input.sign-up.button{type: "submit", value: "Sign Up"}
-
+  %p
+    LevelUp EXP conferences are single day events. LevelUp Build courses run 6&ndash;9
+    weeks.
 %section#about
   .about-content
-    %p
-      LevelUp is a series of classes, workshops and conferences for students
-      who want to add to their classroom learning with real-world experience.
-      Topics range from test-driven development, continuous delivery and pair
-      programming to Agile project management, business analysis and how
-      employers hire grads.
+    %form#get-updates{action: "http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f405fabad2dd5617122558&amp;id=f7f8e45351", method: "post", name: "mc-embedded-subscribe-form"}
+      %h3 Register and be the first to hear about upcoming LevelUp events
 
-    %p
-      LevelUp EXP conferences are single day events. LevelUp Build courses run 6&ndash;9
-      weeks.
+      .details
+        .form-group
+          %input.email{type: "email", name: "EMAIL", placeholder: "Email Address"}
+          %select{type:"drop down", name: "LOCATION"}
+            %option Sydney
+            %option Melbourne
+            %option Brisbane
+            %option Johannesburg
+        .form-group
+          %input.sign-up.button{type: "submit", value: "Sign Up"}
 
     %p
       %strong
