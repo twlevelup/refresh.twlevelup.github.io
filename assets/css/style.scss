@@ -128,7 +128,7 @@ footer {
 
 #hero {
   max-width: 100%;
-  padding: 100px 0;
+  padding: 40px 10px;
   background: #00bccd url('/assets/images/callout-pink.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
@@ -136,11 +136,14 @@ footer {
     color: white;
     font-size: 4em;
     letter-spacing: -0.07em;
-    padding-bottom: 0;
-    margin-bottom: 0;
     line-height: 1em;
-    .light {
-      font-weight: 300;
+    &.tagline {
+      font-size: 2.5em;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    @media #{$phone-screen} {
+      font-size: 2em;
     }
   }
   #get-updates {
@@ -162,11 +165,6 @@ footer {
       }
     }
   }
-  @media #{$phone-screen} {
-    h1.boom {
-      font-size: 2em;
-    }
-  }
 
   &.melbourne {
     background-image: url('/assets/images/melbourne.jpg');
@@ -183,11 +181,113 @@ footer {
 
   p {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
     max-width: $screen-medium;
     margin: 60px auto;
   }
 }
+
+
+section#call-out {
+  padding: 30px 40px 0 40px;
+  border-bottom: 1px solid #ccc;
+  .outcome {
+    text-align: left;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+    h2 {
+      border-bottom: 2px solid $primary-button-color;
+      padding: 40px 0 20px;
+      margin: 0;
+    }
+    > ul {
+      list-style-type: none;
+      padding: 30px 0 30px 20px;
+      margin: 0;
+      position: relative;
+      li {
+        padding-bottom: 14px;
+        &:before {
+          content: '\f004';
+          display: block;
+          position: absolute;
+          left: 0;
+          font-family: FontAwesome;
+          color: $primary-button-color;
+          font-size: 0.8rem;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+  .call-to-action {
+    background: lighten($primary-button-color, 41);
+    border-radius: 5px;
+    padding: 20px 15px 25px 15px;
+    text-align: left;
+    margin: 0 -15px;
+    .group {
+      .label {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: lighten(black, 40);
+        > i {
+          padding-right: 2px;
+        }
+      }
+      p {
+        padding-top: 0;
+        margin-top: 0;
+        font-size: 1.2rem;
+        padding-left: 15px;
+      }
+    }
+    .button {
+      width: 100%;
+      font-size: 1.2rem;
+      &:hover {
+        color: white;
+      }
+    }
+    .button + p {
+      text-align: center;
+      margin: 8px 0 0 0;
+      font-size: 0.8rem;
+    }
+
+  }
+  @media #{$large-screen} {
+    padding-bottom: 100px;
+    &:before, &:after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+    .call-to-action {
+      width: 40%;
+      float: right;
+      margin: 0 0 0 4%;
+      padding: 30px;
+    }
+    .outcome {
+      width: 56%;
+      float: right;
+      margin: 0;
+      h2 {
+        text-align: left;
+        padding-left: 0;
+        margin: 0;
+      }
+    }
+
+  }
+
+
+}
+
+
 
 section#about {
   margin: 0;
