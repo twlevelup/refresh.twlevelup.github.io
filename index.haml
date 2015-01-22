@@ -49,34 +49,48 @@ layout: default
   .border-line
   .upcoming-event
     .event
-      %h4.location Singapore
-      %h5.name LevelUp EXP
+      %h4.location Brisbane
+      %h5.name LevelUp
       .register
-        %a.apply.apply.button{href: "/singapore/exp/1.html"} Register
+        %a.apply.apply.button{href: "/brisbane/exp/3.html"} Register
       .date
-        11th October 2014
-
-  .current-event
-    %h2 Currently Running
-    .border-line
+        March 2015 (TBC)
     .event
       %h4.location Melbourne
-      %h5.name LevelUp Build Driver
+      %h5.name LevelUp
       .register
-        %a.apply.apply.button{href: "/melbourne/course/2.html"} View course
+        %a.apply.apply.button{href: "/melbourne/course/3.html"} Register
       .date
-        19th July 2014
-
+        13th March 2015
     .event
       %h4.location Sydney
-      %h5.name LevelUp Build : Dawn of the Devs
+      %h5.name LevelUp
       .register
-        %a.apply.apply.button{href: "/sydney/course/4.html"} Register
+        %a.apply.apply.button{href: "/sydney/course/5.html"} Register
       .date
-        13th September 2014
+        April 2015 (TBC)
+  -# Current events commented out for now
+    .current-event
+      %h2 Currently Running
+      .border-line
+      .event
+        %h4.location Melbourne
+        %h5.name LevelUp Build Driver
+        .register
+          %a.apply.apply.button{href: "/melbourne/course/2.html"} View course
+        .date
+          19th July 2014
 
-    -#.event
-    -#  %h4.location No Events Currently Running
+      .event
+        %h4.location Sydney
+        %h5.name LevelUp Build : Dawn of the Devs
+        .register
+          %a.apply.apply.button{href: "/sydney/course/4.html"} Register
+        .date
+          13th September 2014
+
+  .event
+  %h4.location No Events Currently Running
 
   .earth
     %img.earth-line{src: "./assets/images/map.png"}
@@ -122,6 +136,7 @@ layout: default
     .answer
       There are lots of great resources out there for people who want to learn to code, here are some good starting points:
       %a{:href => "http://www.codeacademy.com"} CodeAcademy,
+      %a{:href => "http://www.codeschool.com"} Code School,
       %a{:href => "http://www.reddit.com/r/learnprogramming"} r/learnprogramming
     .question
       Is this an internship?
