@@ -1,0 +1,216 @@
+---
+layout: default
+---
+%section#hero.sydney
+  %h1.boom
+    Sydney LevelUp
+    .fa.fa-rocket
+    .light
+      / %em Game of Codes
+
+#registration
+
+  %section#about
+    .about-content
+      %h3
+        -# 22nd March 2014 at
+        April 2015 (TBC) at
+        %a{href: "http://www.thoughtworks.com/contact-us"} ThoughtWorks Sydney
+
+      %p.description
+        Over 6 weeks, you'll deliver a project from start to finish, guided by a team of ThoughtWorks consultants. We'll teach you everything you need to know along the way, from Agile planning and design to writing and testing your own code. You won't just walk away with working software for your portfolio&mdash;you'll have knowledge, skills and experience to hit the ground running in the workplace.
+
+  %section#faq
+    %h2 Course Information
+
+    .border-line
+
+    .questions
+      .question
+        What am I going to learn?
+      .answer
+        This course is designed to bridge the gap between university and your first full time job.
+        You'll experience real world
+        %a{:href => "http://en.wikipedia.org/wiki/Agile_software_development"} Agile software development
+        first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+
+      .question
+        How?
+
+      .answer
+        When you start the course you will meet your team, product owners and come up with a concept for a video game. From then on you will work with your team to deliver a game. The LevelUp team will offer guidance and hands-on support to help you get your software across the line. Make no mistake though, it's you who will be getting the job done!
+
+      .question
+        When is it?
+      .answer
+        April 2015 (TBC), Watch this space. Register your interest to attend below.
+        / The kickoff day is on the 22nd March and filled with games, workshops and group work. Then, we meet weekly from the 24th of March, every
+        / %strong Monday night
+        / from 6pm till 9pm.
+
+      .question
+        What are the different roles?
+      .answer
+        Everyone is going to be involved in design, taking ownership, overall quality. You will have to collaborate on
+        %strong all
+        aspects of the project to ensure a kick-ass game!
+
+        %ul#selector
+          %li Business analysts work closely with product owners to capture requirements and figure out the details.
+          %li Developers will build the game.
+          %li Testers help ensure the overall quality of the product, and provide feedback to developers and business analysts.
+
+      .question
+        What happens when I pick a role&mdash;am I stuck with it?
+      .answer
+        In order to ensure balanced teams, we need people to stick with their role. However, because this is an agile team, just because you're a developer doesn't mean you'll be writing code all the time.
+
+      .question
+        What do I need to bring?
+      .answer
+        Developers
+        %strong must
+        bring their own laptop. Food and drinks will be provided. If you're not a developer, a laptop is useful but not essential.
+
+      .question
+        But I don't know anything about video games.
+      .answer
+        I'm sure you have some awesome ideas though.
+
+      .question Am I guaranteed a spot if I register?
+      .answer To make this the best experience we can we need cross functional teams with the right combination of people in each role (developer, business analyst and tester). Whilst the LevelUp team would love to accept everyone, places are limited.
+
+  %section#register
+    %h2 Sign Up
+    .border-line
+
+    %form#sign-up{action: "http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f405fabad2dd5617122558&amp;id=18f24730a0", method: "post", name: "mc-embedded-subscribe-form"}
+      .form-group
+        %label First Name
+        %input{name: "FNAME", placeholder: "Your Name"}
+
+      .form-group
+        %label Last Name
+        %input{name: "LNAME", placeholder: "Your Surname"}
+
+      .form-group
+        %label Email
+        %input{name: "EMAIL", placeholder: "Your Email"}
+
+      .form-group
+        %label What role interests you the most?
+        %select#role{name: "ROLE"}
+          %option{value: "Business Analyst"} Business Analyst
+          %option{value: "Developer"} Developer
+          %option{value: "Tester"} Tester
+          %option{value: "Not sure"} Not sure
+
+
+      #developer-questions.hide
+        %p If you are intending on doing development during the course, we ask that you fill out this quick questionnaire on skill levels. Please answer honestly&mdash;we are not expecting experts, it's just so we can help plan the teams, so don't stress.
+
+        %h4 Please rate your ability in:
+        .form-group
+          %label Using the command line
+          %select{name: "DEV1"}
+            %option{value: "What is a command line?"} What is a command line?
+            %option{value: "I can cd around, but not much more."} I can cd around, but not much more.
+            %option{value: "There's no place like ~"} There's no place like ~
+
+        .form-group
+          %label Using source control
+          %select{name: "DEV2"}
+            %option{value: "What is source control?"} What is source control?
+            %option{value: "I understand the basics"} I understand the basics
+            %option{value: "I git init everywhere"} I git init everywhere
+
+      .form-group
+        %label.no-wrap How did you hear about LevelUp?
+        %input{name: "REFERENCE", placeholder: "Friends, uni, other"}
+
+      .form-group
+        %input.button{type: "submit", value: "Register"}
+
+-# Remove this comment once agenda is finalised
+  %section#schedule
+    %h2 Kickoff Day Agenda
+
+    .border-line
+
+    .talk
+      .left
+        .time 9.00AM
+        %img{src: "../../assets/images/breakfast.jpg"}
+      .right
+        %h3.title Breakfast and mingling
+        .description
+          Start the day off with a tasty breakfast, and getting to know your fellow LevelUp'ers.
+
+    .talk
+      .left
+        .time 9:30AM
+        %img{src: "../../assets/images/lego.jpg"}
+      .right
+        %h3.title The Lego Game
+        .description
+          The Lego Game is a game designed to give you a taste of the Agile software development process. ThoughtWorks actually uses this game with clients to set the context around working in an Agile team.
+
+
+    .talk
+      .left
+        .time 10:30AM
+        %img{src: "../../assets/images/agile.jpg"}
+      .right
+        %h3.title What the heck is Agile anyway?
+        .description
+          Developing software in an Agile manner needs some basic knowledge. Here we'll show you the in's and out's of stand up's, retro's, 'The Wall', what the Agile manifesto is all about, as well as how developers push and pull quality code.
+
+    .talk
+      .left
+        .time 12.30AM
+        %img{src: "../../assets/images/lunch.jpg"}
+      .right
+        %h3.title Lunch and Product Owner presentations
+        .description
+          Meet your product owners, and find out why they've hired you to help realise there next idea.
+
+    .talk
+      .left
+        .time 1.00PM
+        %img{src: "../../assets/images/inception.png"}
+      .right
+        %h3.title Your very first Inception
+        .description
+          Work with your product owners and teams to brain storm some ideas and come to an agreement on what you'll be building.
+
+    .talk
+      .left
+        .time 4.30PM
+        %img{src: "../../assets/images/presentations.jpg"}
+      .right
+        %h3.title Team presentations
+        .description
+          Work as a team to come up with a proposal you will present to the rest of the group.
+
+    .talk.last
+      .left
+        .time Rest of the evening
+        %img{src: "../../assets/images/socializing.jpg"}
+      .right
+        %h3.title To the pub!
+        .description
+          Socializing and drinks!
+
+
+
+    .clearfix
+
+:javascript
+  $("#role").change(function(){
+    if($("#role option:selected").text() === 'Developer'){
+      $("#developer-questions").show();
+    } else{
+      $("#developer-questions").hide();
+    }
+  });
+
