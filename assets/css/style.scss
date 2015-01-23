@@ -526,7 +526,7 @@ form {
     label {
       font-size: 1.1em;
       margin-right: 20px;
-      text-align: right;
+      text-align: left;
       flex: 1 1 10%;
 
     }
@@ -696,5 +696,14 @@ section#talk {
     }
 
   }
-  
+
+}
+
+.full-width-label {
+  width: 100%;
+}
+
+.custom-input {
+  position: relative;
+  top: -12px;
 }
