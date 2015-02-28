@@ -3,7 +3,7 @@ url: http://levelup.thoughtworks.com
 markdown: redcarpet
 safe: false
 port: 4000
-baseurl: /
+baseurl: ''
 pygments: true
 destination: ./_site
 plugins: ./_plugins

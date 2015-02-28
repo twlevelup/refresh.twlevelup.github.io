@@ -2,6 +2,7 @@ require 'tmpdir'
 
 # Change your GitHub reponame
 GITHUB_REPONAME = "twlevelup/twlevelup.github.io"
+SITEMAP_URL = "http://levelup.thoughtworks.com/sitemap.xml"
 
 desc "Generate blog files"
 task :generate do
@@ -25,5 +26,6 @@ task :publish => [:generate] do
     system "git commit -m #{message.shellescape}"
     system "git remote add origin https://github.com/#{GITHUB_REPONAME}.git"
     system "git push origin master --force"
+    system "curl http://www.google.com/webmasters/sitemaps/ping?sitemap=#{SITEMAP_URL} > /dev/null"
   end
 end
