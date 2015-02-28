@@ -1,4 +1,5 @@
 name: LevelUp
+url: http://levelup.thoughtworks.com
 markdown: redcarpet
 safe: false
 port: 4000
@@ -11,3 +12,5 @@ sass:
     style: expanded
     deploy_style: compressed
     compile_in_place: false
+sitemap:
+    priority_name: "sitemap_priority"
