@@ -601,6 +601,52 @@ form {
     }
   }
 
+
+section#reading-list {
+  .location {
+    padding: 30px 0 20px 0;
+    border-bottom: 1px solid #ccc;
+
+    &.last {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+    .left, .right {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;
+      @media #{$pad-screen} {
+        width: 100%;
+      }
+    }
+
+    .right {
+      width: 60%;
+      text-align: left;
+      @media #{$pad-screen} {
+        text-align: center;
+        padding-top: 20px;
+      }
+    }
+
+    .title, h2 {
+      margin: 0;
+      margin-bottom: 5px;
+      padding-bottom: 0;
+    }
+
+    .event {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1em;
+      font-weight: normal;
+    }
+  }
+}
+
+
 section#schedule {
   .talk {
     padding: 20px 0;
