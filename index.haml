@@ -16,12 +16,16 @@ sitemap_priority: 1.0
     employers hire grads.
 
   %p
+    LevelUp is a not-for-profit initiative, run by ThoughtWorks volunteers
+    %br
+    and industry professionals.
+  %p
     LevelUp EXP conferences are single day events. LevelUp Build courses run 6&ndash;9
     weeks.
   %h6.powered-by
     Powered by
   %img{src: "/assets/images/tw-logo-white.png", width: "125"}
-%section#about
+-# %section#about
   .about-content
     %form#get-updates{action: "http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f405fabad2dd5617122558&amp;id=f7f8e45351", method: "post", name: "mc-embedded-subscribe-form"}
       %h3 Register and be the first to hear about upcoming LevelUp events
@@ -38,38 +42,39 @@ sitemap_priority: 1.0
         .form-group
           %input.sign-up.button{type: "submit", value: "Sign Up"}
 
-    %p
-      LevelUp is a not-for-profit initiative,
-      %br
-      run by ThoughtWorks volunteers and industry professionals.
+
 
 
 %section#events
-  %h2 Upcoming Events
-
-  .border-line
-  .upcoming-event
-    .event
-      %h4.location Brisbane
-      %h5.name LevelUp
-      .register
-        %a.apply.apply.button{href: "/brisbane/exp/3.html"} Learn More
-      .date
-        11th March 2015
-    .event
-      %h4.location Melbourne
-      %h5.name LevelUp
-      .register
-        %a.apply.apply.button{href: "/melbourne/info.html"} Learn More
-      .date
-        14th March 2015
-    .event
-      %h4.location Sydney
-      %h5.name LevelUp Build
-      .register
-        %a.apply.apply.button{href: "/sydney/course/5-register.html"} Learn More
-      .date
-        11th April 2015
+  -#%h2 Upcoming Events
+  -#
+  -#.border-line
+  -#%ul.event-list.upcoming-events
+  -#  %li.event
+  -#    %h4.location Brisbane
+  -#    .name
+  -#      LevelUp
+  -#    .date
+  -#      11th March 2015
+  -#    .register
+  -#      %a.button{href: "/brisbane/exp/3.html"} Learn More
+  -#  %li.event
+  -#    %h4.location Melbourne
+  -#    .name
+  -#      LevelUp
+  -#    .date
+  -#      14th March 2015
+  -#    .register
+  -#      %a.button{href: "/melbourne/info.html"} Learn More
+  -#  %li.event
+  -#    %h4.location
+  -#      Sydney
+  -#    .name
+  -#      LevelUp Build
+  -#    .date
+  -#      11th April 2015
+  -#    .register
+  -#      %a.button{href: "/sydney/course/5-register.html"} Learn More
   -# Current events commented out for now
     .current-event
       %h2 Currently Running
@@ -90,14 +95,42 @@ sitemap_priority: 1.0
         .date
           13th September 2014
 
-  .event
-  %h4.location No Events Currently Running
+  %h2 Regions
+  .border-line.secondary
+  .event-list
+    .event
+      %h4.location Brisbane
+      .register
+        %a{href: "/brisbane/exp/3.html"} Learn More
+    .event
+      %h4.location Melbourne
+      .register
+        %a{href: "/melbourne/info.html"} Learn More
+    .event
+      %h4.location Sydney
+      .register
+        %a{href: "sydney/course/5-register.html"} Learn More
+    .event
+      %h4.location Singapore
+      .register
+        %a{href: "/singapore/info.html"} Learn More
+    .event
+      %h4.location Johannesburg
+      .register
+        %a{href: "/johannesburg/course/1.html"} Learn More
+  %p
+    If you could not find your region in the list, please contact your
+    %a{href: "http://www.thoughtworks.com/contact-us"}
+      local office
+    for more information.
+  -#.event
+  -#%h4.location No Events Currently Running
+  -#
+  -#.earth
+  -#  %img.earth-line{src: "./assets/images/map.png"}
 
-  .earth
-    %img.earth-line{src: "./assets/images/map.png"}
-
-  %div
-    %a{href: "previous-events.html"} See previous events
+  -#%div
+  -#  %a{href: "previous-events.html"} See previous events
 
 %section#faq
   %h2 Frequently Asked Questions

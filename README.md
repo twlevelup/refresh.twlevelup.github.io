@@ -1,8 +1,9 @@
 ## Running locally
 
-All changes should be made on the `source` branch. To preview the site locally:
+All changes should be made on the `source` branch. To preview the site locally(http://localhost:4000):
 
     $ bundle install && bundle exec jekyll serve -w --baseurl=""
+
 
 ## Building
 
