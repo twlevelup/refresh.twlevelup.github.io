@@ -1,3 +1,6 @@
+---
+---
+
 $screen-small: 414px;
 $screen-medium: 768px;
 $screen-large: 960px;
@@ -254,26 +257,9 @@ section#call-out {
       }
     }
 
-    .form-group {
-
-    }
     .group-register {
        margin-top: 30px;
     }
-    .button {
-      width: 100%;
-      font-size: 1.2rem;
-      margin: 0;
-      &:hover {
-        color: white;
-      }
-    }
-    .button + p {
-      text-align: center;
-      margin: 8px 0 0 0;
-      font-size: 0.8rem;
-    }
-
   }
 
   @media #{$large-screen} {
@@ -539,6 +525,27 @@ section#events {
   }
 }
 
+.registration {
+  text-align: center;
+
+  .register-button {
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 0;
+    &:hover {
+      color: white;
+    }
+
+    & + p {
+      font-size: 0.8rem;
+    }
+  }
+
+  p {
+    margin: 8px 0 0 0;
+  }
+}
+
 section#testimonials {
   box-sizing: border-box;
   margin: 0;
@@ -733,12 +740,12 @@ section#reading-list {
 section#schedule {
   .talk {
     padding: 20px 0;
-    border-bottom: 1px solid #ccc;
 
-    &.last {
-      padding-bottom: 40px;
-      margin-bottom: 40px;
+    &+.talk {
+      border-top: 1px solid #ccc;
     }
+
+
 
     .left, .right {
       display: inline-block;
@@ -798,6 +805,14 @@ section#faq {
   }
 }
 
+section#event-information {
+  max-width: $screen-medium;
+  text-align: left;
+  h2 {
+    text-align: center;
+  }
+}
+
 .dev-checklist {
   padding-left: 40px;
 }
@@ -816,7 +831,6 @@ section#talk {
 
     .speakerdeck {
       background:transparent url('/assets/images/loading.gif') center center no-repeat;
-
     }
 
     .date {
