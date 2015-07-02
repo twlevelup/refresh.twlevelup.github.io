@@ -4,7 +4,7 @@ markdown: redcarpet
 safe: false
 port: 4000
 baseurl: ''
-pygments: true
+highlighter: pygments
 destination: ./_site
 plugins: ./_plugins
 exclude: [config.ru, Gemfile, Gemfile.lock, Procfile, Rakefile, vendor]
