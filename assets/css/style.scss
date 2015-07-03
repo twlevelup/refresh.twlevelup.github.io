@@ -546,6 +546,18 @@ section#events {
   }
 }
 
+section.events {
+
+  ul {
+    list-style-type: none;
+  }
+
+  div.event-detail {
+    display: inline;
+  }
+
+}
+
 section#testimonials {
   box-sizing: border-box;
   margin: 0;
