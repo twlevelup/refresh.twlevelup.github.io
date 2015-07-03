@@ -1,5 +1,25 @@
-Mogadishu:
+Sydney:
   course:
     description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
-  exp:
-    description: Etc etc.
+  express:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+Melbourne:
+  course:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+  express:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+Singapore:
+  course:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+  express:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+Brisbane:
+  course:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+  express:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+Johannesburg:
+  course:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.
+  express:
+    description: LevelUp is designed to bridge the gap between university and your first full time job. You'll experience real world Agile software development first-hand. You'll learn all about inceptions, standups, story writing, continuous delivery, test automation, pairing, test-driven development, retrospectives and more.

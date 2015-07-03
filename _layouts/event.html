@@ -17,8 +17,8 @@ layout: default
       {% if page.key-dates %}
         {% for item in page.key-dates %}
           <div class="group">
-            <div class="label"><i class="fa fa-clock-o"></i>item.name</div>
-            <p>item.value</p>
+            <div class="label"><i class="fa fa-clock-o"></i>{{ item.name }}</div>
+            <p>{{ item.value }}</p>
           </div>
         {% endfor %}
       {% endif %}
