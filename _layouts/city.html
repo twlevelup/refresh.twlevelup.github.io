@@ -19,9 +19,7 @@ layout: default
     {% for event in site.pages | sort: 'date' %}
       {% if event.layout == "event" and event.city == page.city %}
         <li>
-          <div class="event-detail"><a href="{{ event.url }}">{{ event.event }}</a></div>
-          <div class="event-detail"><a href="{{ event.url }}">{{ event.title }}</a></div>
-          <div class="event-detail"><a href="{{ event.url }}">{{ event.date | date: "%A %B %-d, %Y" }}</a></div>
+          {% include event_detail.html event=event %}
         </li>
       {% endif %}
     {% endfor %}
