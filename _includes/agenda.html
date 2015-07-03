@@ -1,0 +1,16 @@
+<section id="agenda">
+  <h2>{{ include.title }} Agenda</h2>
+  <div class="border-line"></div>
+  {% for item in include.agenda %}
+    <div class='talk'>
+      <div class='left'>
+        <div class='time'>{{item.time}}</div>
+        <img src="../../assets/images/{{ item.img }}" ></img>
+      </div>
+      <div class="right">
+        <h3 class="title">{{item.title}}</h3>
+        <div class="description">{{item.description}}</div>
+      </div>
+    </div>
+  {% endfor %}
+</section>

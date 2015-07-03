@@ -1,0 +1,10 @@
+<div class="registration">
+  {% if include.open %}
+    <a class="button register-button" href: "{{ include.registration.url }}", target: "_blank">
+      Count me in!
+    </a>
+    <p>It's free!</p>
+  {% else %}
+    <p><strong>Registration is now closed.</strong></p>
+  {% endif %}
+</div>
