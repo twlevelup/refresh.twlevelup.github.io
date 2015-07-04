@@ -27,7 +27,27 @@ registration-url: http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f4
   </h6>
 </section>
 
-<section id="about-content">
+<section id="locations">
+  <h2>Cities</h2>
+  <div class="border-line"></div>
+  <div class="location-list">
+    {% for location in page.locations %}
+      <div class="location">
+        <h4 class="title">{{ location }}</h4>
+        <div class="register">
+          <a href="/{{ location }}/">Learn More</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+<p>
+  If you could not find your city in the list, please contact your
+    <a href= "http://www.thoughtworks.com/contact-us">local office</a>
+  for more information.
+</p>
+</section>
+
+<section id="register">
   <form id="get-updates" action="{{page.registration-url}}" method="post" name="mc-embedded-subscribe-form">
     <h3>Register and be the first to hear about upcoming LevelUp events</h3>
     <div class="form-group">
@@ -43,108 +63,24 @@ registration-url: http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f4
     </div>
   </form>
 </section>
-<section class="locations">
-  <h2>Cities</h2>
-  <div class="border-line"></div>
-  <div class="event-list">
-    {% for location in page.locations %}
-      <div class="event">
-        <h4 class="location">{{ location }}</h4>
-        <div class="register">
-          <a href="/{{ location }}/">Learn More</a>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-<p>
-  If you could not find your city in the list, please contact your
-    <a href= "http://www.thoughtworks.com/contact-us">local office</a>
-  for more information.
-</p>
 
-</section>
 <section class="events">
   <h2>Events</h2>
   <div class="border-line"></div>
   <ul class="event-list upcoming-events">
     {% for event in site.pages | sort: 'date' %}
+      {% if event.layout == "event" %}
         <li>
-          {% include event_detail.html event=event %}
+          {% include event_detail.html location=true event=event %}
         </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </section>
-<section class="faq">
+<section class="body-content">
   <h2>Frequently Asked Questions</h2>
-
   <div class="border-line"></div>
-  <div class="question">
-    How much does it cost to attend LevelUp?
-  </div>
-  <div class="answer">
-    LevelUp events are completely free!
-  </div>
-  <div class="question">
-    How is that possible?
-  </div>
-  <div class="answer">
-    LevelUp is run by a group of dedicated volunteers who believe in giving back to the community.
-  </div>
-  <div class="question">
-    I've already attended a LevelUp event, can I still register?
-  </div>
-  <div class="answer">
-    Sure!
-  </div>
-  <div class="question">
-    I registered for LevelUp but life got complicated and I can no longer attend, what do I do?
-  </div>
-  <div class="answer">
-    We completely understand. If you've already registered for LevelUp and can no longer attend all we ask is that you let us know as soon as possible. LevelUp events are extremely popular and there are plenty of people who would like to take your spot. Just email
-    <a href="mailto:levelup@thoughtworks.com">levelup@thoughtworks.com</a>
-    and let us know.
-  </div>
-  <div class="question">
-    I've never written any code before, is this right for me?
-  </div>
-  <div class="answer">
-    There are roles in LevelUp teams for coders and non-coders, however anyone coding during the course is expected to have experience in at least one language.
-  </div>
-  <div class="question">
-    Okay, but I still want to learn to code, can you help me?
-  </div>
-  <div class="answer">
-    There are lots of great resources out there for people who want to learn to code, here are some good starting points:
-    <a href="http://www.codeacademy.com"> CodeAcademy,</a>
-    <a href="http://www.codeschool.com"> Code School,</a>
-    <a href="http://www.reddit.com/r/learnprogramming"> r/learnprogramming</a>
-  </div>
-  <div class="question">
-    Is this an internship?
-  </div>
-  <div class="answer">
-    LevelUp events are not internships, but you will receive a certificate to show that you've taken part.
-  </div>
-  <div class="question">
-    How do I get a job at ThoughtWorks?
-  </div>
-  <div class="answer">
-    ThoughtWorks is always on the look out for talented people, please
-    <a href="http://www.thoughtworks.com/join"> get in touch!</a>
-  </div>
-  <div class="question">
-    Will there be food/drinks?
-  </div>
-  <div class="answer">
-    LevelUp events are catered, just make sure you let us know about any dietary requirements when you register.
-  </div>
-  <div class="question">
-    I've still got questions, help?!
-  </div>
-  <div class="answer">
-    If you can't find the answers send an e-mail to
-    <a href="mailto:levelup@thoughtworks.com">levelup@thoughtworks.com</a>
-    and we'll do our best.
+  {{ content }}
 </section>
 <section id="testimonials">
   <h2>What Our Students Have to Say</h2>

@@ -1,67 +1,56 @@
 ---
 ---
-
 $screen-small: 414px;
 $screen-medium: 768px;
 $screen-large: 960px;
-
 $primary-button-color: #f61f62;
 $info-button-color: #6dbb6f;
 $input-border-color: #ddd;
 $link-color: #f61f62;
-$disabled-color: #B6B6B6;
-
+$disabled-color: #b6b6b6;
 $phone-screen: "only screen and (max-width: #{$screen-small})";
 $pad-screen: "only screen and (max-width: #{$screen-medium})";
 $large-screen: "only screen and (min-width: #{$screen-large})";
-
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 $navbar-height: 80px;
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   padding: 0;
   margin: 0;
 }
-
 a {
   color: $link-color;
   text-decoration: none;
-
   &:hover {
     color: darken($link-color, 15%);
   }
 }
-
 h2 {
   font-size: 2em;
   font-weight: 300;
 }
-
-section, footer, header {
+section,
+footer,
+header {
   padding: 20px 0;
   text-align: center;
   width: 100%;
   max-width: $screen-large;
   margin: 0 auto;
 }
-
 footer {
   padding: 0;
   .mascot {
     margin-bottom: 50px;
     max-width: 200px;
   }
-
   .social-links {
     margin: 15px auto;
     padding-bottom: 30px;
-
     a {
       padding: 0 15px;
     }
@@ -71,45 +60,36 @@ footer {
     margin-bottom: 45px;
   }
 }
-
-
 .border-line {
   border: 4px #f61f62 solid;
   margin: 30px auto;
   max-width: 400px;
-
   @media #{$phone-screen} {
     width: 100%;
     margin: 30px 0;
   }
 }
-
 .border-line.secondary {
   border-color: #c5c5c5;
 }
-
 .title {
   h1 {
-    margin-bottom: 0
+    margin-bottom: 0;
   }
   h2 {
-    margin-top: 0
+    margin-top: 0;
   }
 }
-
 .clearfix {
   clear: both;
 }
-
 .hide {
   display: none;
 }
-
 .button {
   display: inline-block;
   font-weight: normal;
-  padding: 0.55em 1.5em;
-  padding-bottom: 0.75em;
+  padding: 0.55em 1.5em 0.75em;
   border: 0;
   border-radius: 5px;
   background-color: $primary-button-color;
@@ -119,24 +99,20 @@ footer {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-
   &:hover {
     background-color: lighten($primary-button-color, 10%);
   }
 }
-
 .info-button {
   background-color: $info-button-color;
-
   &:hover {
     background-color: lighten($info-button-color, 10%);
   }
 }
-
 #hero {
   max-width: 100%;
   padding: 40px 10px;
-  background: #00bccd url('/assets/images/callout-pink.jpg') no-repeat center center;
+  background: #00bccd url("/assets/images/callout-pink.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   h1.boom {
@@ -159,33 +135,29 @@ footer {
       font-weight: 300;
       color: white;
     }
-
     .details {
       @media #{$phone-screen} {
         padding: 10px;
         width: 100%;
       }
-
       .sign-up {
         top: -2px;
         position: relative;
       }
     }
   }
-
   &.melbourne {
-    background-image: url('/assets/images/melbourne.jpg');
+    background-image: url("/assets/images/melbourne.jpg");
   }
   &.sydney {
-    background-image: url('/assets/images/sydney.jpg');
+    background-image: url("/assets/images/sydney.jpg");
   }
   &.jozi {
-    background-image: url('/assets/images/jozi.jpg');
+    background-image: url("/assets/images/jozi.jpg");
   }
   &.brisbane {
-    background-image: url('/assets/images/brisbane.jpg');
+    background-image: url("/assets/images/brisbane.jpg");
   }
-
   p {
     color: white;
     font-size: 1.2em;
@@ -194,14 +166,12 @@ footer {
   }
   .powered-by {
     color: white;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
     font-weight: normal;
   }
 }
-
-
 section#call-out {
-  padding: 30px 40px 0 40px;
+  padding: 30px 40px 0;
   border-bottom: 1px solid #ccc;
   .outcome {
     text-align: left;
@@ -237,7 +207,7 @@ section#call-out {
   .call-to-action {
     background: lighten($primary-button-color, 41);
     border-radius: 5px;
-    padding: 20px 15px 25px 15px;
+    padding: 20px 15px 25px;
     text-align: left;
     margin: 0 -15px;
     .group {
@@ -256,15 +226,14 @@ section#call-out {
         padding-left: 15px;
       }
     }
-
     .group-register {
-       margin-top: 30px;
+      margin-top: 30px;
     }
   }
-
   @media #{$large-screen} {
     padding-bottom: 100px;
-    &:before, &:after {
+    &:before,
+    &:after {
       clear: both;
       content: '';
       display: table;
@@ -285,25 +254,17 @@ section#call-out {
         margin: 0;
       }
     }
-
   }
-
-
 }
-
-
-
 section#about {
   margin: 0;
   max-width: 100%;
   padding: 40px;
   width: 100%;
-
   .about-content {
     max-width: $screen-medium;
     margin: 0 auto;
   }
-
   p {
     line-height: 1.6em;
     font-weight: normal;
@@ -311,36 +272,32 @@ section#about {
     margin-bottom: 55px;
   }
 }
-
 section#photos {
   img {
     float: left;
-    margin: 0 1.5% 3% 1.5%;
+    margin: 0 1.5% 3%;
     overflow: hidden;
   }
-
   img.small {
     margin-left: 0;
     width: 31%;
     float: right;
   }
-
   img.large {
     margin-right: 0;
     width: 63%;
   }
 }
-
 section#previous-events {
   .location {
-    padding: 30px 0 20px 0;
+    padding: 30px 0 20px;
     border-bottom: 1px solid #ccc;
-
     &.last {
       padding-bottom: 40px;
       margin-bottom: 40px;
     }
-    .left, .right {
+    .left,
+    .right {
       display: inline-block;
       width: 30%;
       vertical-align: top;
@@ -348,7 +305,6 @@ section#previous-events {
         width: 100%;
       }
     }
-
     .right {
       width: 60%;
       text-align: left;
@@ -357,73 +313,59 @@ section#previous-events {
         padding-top: 20px;
       }
     }
-
-    .title, h2 {
-      margin: 0;
-      margin-bottom: 5px;
+    .title,
+    h2 {
+      margin: 0 0 5px;
       padding-bottom: 0;
     }
-
     .event {
       margin-bottom: 20px;
     }
-
     h3 {
       font-weight: normal;
     }
   }
 }
-
-section#events {
+section#locations {
   max-width: 1024px;
-
-  .event {
+  .location {
     border-left: 1px solid #c5c5c5;
     box-sizing: border-box;
     display: inline-block;
     width: 200px;
     padding: 30px;
     font-size: 1em;
-
-    .location, .name {
+    .title,
+    .name {
       margin: 0;
     }
-
     h4 {
       font-size: 1.6em;
       font-weight: 300;
     }
-
     .name {
       font-weight: 300;
       color: #333;
     }
-
     .register {
       padding-top: 20px;
       padding-bottom: 20px;
-
     }
-
     .date {
       font-style: italic;
     }
-
     .apply {
       color: white;
     }
-
     .finished {
       background-color: $disabled-color;
     }
-
     @media #{$pad-screen} {
       width: 100%;
       float: none;
       border-left: none;
     }
   }
-
   .current-event {
     h2 {
       padding-top: 40px;
@@ -437,97 +379,77 @@ section#events {
       }
     }
   }
-
-  .event-list {
+  .location-list {
     margin-bottom: 50px;
-
     .event:nth-of-type(1) {
       border-left: none;
     }
   }
   .test {
-    padding:0;
+    padding: 0;
     width: 25%;
     background-color: red;
     height: 20px;
   }
-
   .upcoming-events {
-
-      li {
-        border-left: none;
-        width: 100%;
-        padding: 5px 5%;
-        clear:both;
+    li {
+      border-left: none;
+      width: 100%;
+      padding: 5px 5%;
+      clear: both;
+    }
+    li > * {
+      float: left;
+      padding: 5px 0.6em;
+      text-align: left;
+      width: 25%;
+      height: 50px;
+    }
+    .location,
+    .name {
+      @media #{$pad-screen} {
+        width: 30%;
       }
-
-      li > * {
-         float: left;
-         padding: 5px 0.6em;
-         text-align: left;
-         width: 25%;
-         height: 50px;
+      @media #{$phone-screen} {
+        width: 50%;
+        text-align: center;
       }
-
-      .location, .name {
-        @media #{$pad-screen} {
-          width: 30%;
-        }
-
-        @media #{$phone-screen} {
-          width: 50%;
-          text-align: center;
-        }
+    }
+    .date {
+      @media #{$pad-screen} {
+        width: 30%;
+        text-align: center;
       }
-
-
-      .date {
-        @media #{$pad-screen} {
-          width: 30%;
-          text-align: center;
-        }
-
-        @media #{$phone-screen} {
-          width: 90%;
-          height: 30px;
-          line-height: 20px;
-        }
+      @media #{$phone-screen} {
+        width: 90%;
+        height: 30px;
+        line-height: 20px;
       }
-
-      .register {
-        margin-top: -30px;
-        text-align: right;
-
-        @media #{$pad-screen} {
-          width: 90%;
-          text-align: center;
-        }
+    }
+    .register {
+      margin-top: -30px;
+      text-align: right;
+      @media #{$pad-screen} {
+        width: 90%;
+        text-align: center;
       }
-
-      button {
-          width: 30px;
-      }
-
-
-
+    }
+    button {
+      width: 30px;
+    }
   }
-
   .earth-line {
     max-width: 500px;
-
     @media #{$phone-screen} {
       display: none;
     }
-
     @media #{$pad-screen} {
       width: 100%;
     }
   }
 }
-
 .registration {
   text-align: center;
-
   .register-button {
     width: 100%;
     font-size: 1.2rem;
@@ -535,46 +457,66 @@ section#events {
     &:hover {
       color: white;
     }
-
     & + p {
       font-size: 0.8rem;
     }
   }
-
   p {
-    margin: 8px 0 0 0;
+    margin: 8px 0 0;
   }
 }
-
 section.events {
-
+  max-width: $screen-medium;
   ul {
-    list-style-type: none;
+    padding:initial;
+    list-style: none;
+    text-align: left;
+    .event-details {
+      div {
+        padding: 10px;
+        display: inline-block;
+      }
+      .event-location {
+        text-align: right;
+        min-width:25%;
+      }
+      .event-title {
+        max-width:40%;
+      }
+      .event-date {
+        width:25%;
+      }
+    }
   }
-
-  div.event-detail {
-    display: inline;
+  @media #{$pad-screen} {
+    ul {
+      .event-details {
+        margin: 10px;
+        .event-location, .event-title, .event-date{
+          padding: initial;
+          max-width: 100%;
+          width: 100%;
+          float: none;
+          text-align: center;
+        }
+      }
+    }
   }
-
 }
-
 section#testimonials {
   box-sizing: border-box;
   margin: 0;
   max-width: 100%;
   width: 100%;
-
   .profile {
     display: inline-block;
     text-align: center;
     width: 30%;
-
     @media #{$pad-screen} {
       width: 100%;
       display: block;
       margin-bottom: 35px;
     }
-
     .quote {
       background: #f3f3f3;
       border: 1px solid white;
@@ -584,18 +526,15 @@ section#testimonials {
       text-align: center;
       width: 80%;
     }
-
     .person {
       font-weight: bold;
       margin-top: 10px;
     }
-
     small {
       color: #5c5c5c;
       display: inline-block;
       padding-top: 10px;
     }
-
     img {
       border: 1px solid #c5c5c5;
       border-radius: 100%;
@@ -604,116 +543,93 @@ section#testimonials {
     }
   }
 }
-
-
 #wide {
   width: 380px;
   padding-top: 15px;
 }
-
 .no-wrap {
   white-space: nowrap;
 }
-
 form {
   .form-group {
-
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 400px;
     margin: 0 auto;
-
     label {
       font-size: 1.1em;
       margin-right: 20px;
       text-align: left;
       flex: 1 1 10%;
-
     }
-
-    input, select, textarea {
+    input,
+    select,
+    textarea {
       font-size: 1em;
     }
-
-    input, textarea {
+    input,
+    textarea {
       flex: 1 1 auto;
       padding: 9px;
       border: 1px solid $input-border-color;
       border-radius: 3px;
       font-weight: normal;
-
       @media #{$phone-screen} {
         max-width: none;
       }
-
     }
-
   }
-
-
-
   input[type=checkbox] {
     width: 30px;
   }
-
-
-
   input[type=submit] {
-
     flex: none;
     width: 200px;
     max-width: 340px;
-    padding: 0.55em 1.5em;
-    padding-bottom: 0.75em;
+    padding: 0.55em 1.5em 0.75em;
     border: none;
     &:disabled {
       background-color: $disabled-color;
     }
   }
-
-
   select {
     height: 34px;
     padding: 6px 12px;
     font-weight: normal;
-    background-color: #FFF;
-    border: 1px solid #CCC;
+    background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 4px;
   }
-
   .button {
     font-size: 1.2em;
     margin: 15px auto;
-
     @media #{$phone-screen} {
       width: 100%;
       margin-top: 25px;
     }
   }
 }
-
-  #register {
-    max-width: $screen-medium;
-
-    .description {
-      margin: 30px auto;
-      line-height: 1.5em;
-    }
+#register {
+  max-width: $screen-medium;
+  .description {
+    margin: 30px auto;
+    line-height: 1.5em;
   }
+}
 
 
 section#reading-list {
   .location {
-    padding: 30px 0 20px 0;
+    padding: 30px 0 20px;
     border-bottom: 1px solid #ccc;
-
     &.last {
       padding-bottom: 40px;
       margin-bottom: 40px;
     }
-    .left, .right {
+    .left,
+    .right {
       display: inline-block;
       width: 30%;
       vertical-align: top;
@@ -721,7 +637,6 @@ section#reading-list {
         width: 100%;
       }
     }
-
     .right {
       width: 60%;
       text-align: left;
@@ -730,46 +645,36 @@ section#reading-list {
         padding-top: 20px;
       }
     }
-
-    .title, h2 {
-      margin: 0;
-      margin-bottom: 5px;
+    .title,
+    h2 {
+      margin: 0 0 5px;
       padding-bottom: 0;
     }
-
     .event {
       margin-bottom: 20px;
     }
-
     h3 {
       font-size: 1em;
       font-weight: normal;
     }
   }
 }
-
-
 section#schedule {
   .talk {
     padding: 20px 0;
-
     &+.talk {
       border-top: 1px solid #ccc;
     }
-
-
-
-    .left, .right {
+    .left,
+    .right {
       display: inline-block;
       width: 30%;
       vertical-align: top;
     }
-
     .right {
       width: 60%;
       text-align: left;
     }
-
     img {
       border: 1px solid #c5c5c5;
       border-radius: 100%;
@@ -777,26 +682,21 @@ section#schedule {
       height: 100px;
       width: auto;
     }
-
-    .title, .presenter {
+    .title,
+    .presenter {
       margin: 0;
       padding: 0;
     }
-
     .presenter {
       font-weight: normal;
       margin-bottom: 15px;
     }
-
     &.break {
       color: darkgrey;
     }
   }
 }
-
 section#faq {
-  // padding: 0px 40px 0px 40px;
-
   max-width: $screen-medium;
   .events {
     text-align: left;
@@ -810,55 +710,44 @@ section#faq {
       font-weight: bold;
       font-size: 1em;
     }
-
     .answer {
       margin-bottom: 30px;
     }
   }
 }
-
-section#event-information {
+section.body-content {
   max-width: $screen-medium;
   text-align: left;
   h2 {
     text-align: center;
   }
 }
-
 .dev-checklist {
   padding-left: 40px;
 }
-
 #developer-questions {
   padding-left: 40px;
   padding-left: 40px;
 }
-
 section#talk {
   .talk {
     margin-left: auto;
     margin-right: auto;
     width: 710px;
     text-align: left;
-
     .speakerdeck {
-      background:transparent url('/assets/images/loading.gif') center center no-repeat;
+      background: transparent url("/assets/images/loading.gif") center center no-repeat;
     }
-
     .date {
       color: darkgrey;
       padding-left: 5px;
       font-weight: normal;
     }
-
   }
-
 }
-
 .full-width-label {
   width: 100%;
 }
-
 .custom-input {
   position: relative;
   top: -12px;

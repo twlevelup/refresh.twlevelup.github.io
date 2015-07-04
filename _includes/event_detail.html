@@ -1,3 +1,18 @@
-<div class="event-detail"><a href="{{ event.url }}">{{ event.event }}</a></div>
-<div class="event-detail"><a href="{{ event.url }}">{{ event.title }}</a></div>
-<div class="event-detail"><a href="{{ event.url }}">{{ event.date | date: "%A %B %-d, %Y" }}</a></div>
+{% if event.active %}
+  <div class="event-details active">
+    {% if include.location %}
+      <div class="event-location"><a href="{{ event.url }}">{{ event.city }}</a></div>
+    {% endif %}
+    <div class="event-date"><a href="{{ event.url }}">{{ event.date | date: "%a %-d %b , %Y" }}</a></div>
+    <div class="event-title"><a href="{{ event.url }}">{{ event.event }} {{ event.title }}</a></div>
+  </div>
+
+{% else %}
+  <div class="event-details">
+    {% if include.location %}
+      <div class="event-location">{{ event.city }}</div>
+    {% endif %}
+    <div class="event-date">{{ event.date | date: "%a %-d %b , %Y" }}</div>
+    <div class="event-title">{{ event.event }} {{ event.title }}</div>
+  </div>
+{% endif %}
