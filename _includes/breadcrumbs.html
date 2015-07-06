@@ -1,0 +1,17 @@
+{% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
+{% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
+{% assign previous="" %}
+<div class="breadcrumbs">
+    <span><a href="/"><span class="fa fa-rocket"></span> Home</a> | </span>
+  {% for unused in page.content spanmit:num_parts %}
+   {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
+   {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
+   <span><a href="{{previous}}">{{ first_word | capitalize }}</a> | </span>
+
+   {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
+  {% endfor %}
+  <span> {{ page.title }} </span>
+</div>
+{% comment %}
+This cheeky bit of breadcrumbing is drawn from http://bit.ly/1IZLJGO
+{% endcomment %}

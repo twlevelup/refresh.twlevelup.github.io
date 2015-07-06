@@ -328,19 +328,6 @@ section#locations {
       border-left: none;
     }
   }
-  // .current-event {
-  //   h2 {
-  //     padding-top: 40px;
-  //   }
-  //   .event {
-  //     &:nth-of-type(2) {
-  //       border-left: none;
-  //     }
-  //     .date {
-  //       padding-top: 15px;
-  //     }
-  //   }
-  // }
   .location-list {
     margin-bottom: 50px;
     .event:nth-of-type(1) {
@@ -353,51 +340,6 @@ section#locations {
     background-color: red;
     height: 20px;
   }
-  // .upcoming-events {
-  //   li {
-  //     border-left: none;
-  //     width: 100%;
-  //     padding: 5px 5%;
-  //   }
-  //   li > * {
-  //     padding: 5px 0.6em;
-  //     text-align: left;
-  //     width: 25%;
-  //     height: 50px;
-  //   }
-  //   .location,
-  //   .name {
-  //     @media #{$pad-screen} {
-  //       width: 30%;
-  //     }
-  //     @media #{$phone-screen} {
-  //       width: 50%;
-  //       text-align: center;
-  //     }
-  //   }
-  //   .date {
-  //     @media #{$pad-screen} {
-  //       width: 30%;
-  //       text-align: center;
-  //     }
-  //     @media #{$phone-screen} {
-  //       width: 90%;
-  //       height: 30px;
-  //       line-height: 20px;
-  //     }
-  //   }
-  //   .register {
-  //     margin-top: -30px;
-  //     text-align: right;
-  //     @media #{$pad-screen} {
-  //       width: 90%;
-  //       text-align: center;
-  //     }
-  //   }
-  //   button {
-  //     width: 30px;
-  //   }
-  // }
   .earth-line {
     max-width: 500px;
     @media #{$phone-screen} {
@@ -408,6 +350,12 @@ section#locations {
     }
   }
 }
+
+.breadcrumbs {
+  padding: 10px;
+  margin-left: 20%;
+}
+
 .registration {
   text-align: center;
   .register-button {
