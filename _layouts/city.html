@@ -12,7 +12,8 @@ layout: default
     <h2>Upcoming Events</h2>
     <div class="border-line"></div>
     <ul class="event-list">
-      {% for event in site.pages | sort: 'date' %}
+      {% assign sorted_pages = site.pages | sort: 'date' %}
+      {% for event in sorted_pages reversed %}
         {% if event.layout == "event" and event.city == page.city %}
           <li>
             {% include event_detail.html event=event %}
