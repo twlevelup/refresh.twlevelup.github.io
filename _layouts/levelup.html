@@ -1,30 +1,71 @@
 ---
 layout: default
 registration-url: http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f405fabad2dd5617122558&amp;id=f7f8e45351
+subtitle: Bridging the gap between university and the workplace
+
 ---
-<section id="hero" class="{{ page.city }}">
-  <img src="/assets/images/levelup-logo-web-orangered-white.png"></img>
-  <h1 class="boom tag-line">
-    Bridging the gap between university and the workplace
-  </h1>
-  <p>
-    LevelUp is a series of classes, workshops and conferences for students
-    who want to add to their classroom learning with real-world experience.
-    Topics range from test-driven development, continuous delivery and pair
-    programming to Agile project management, business analysis and how
-    employers hire grads.
-  </p>
-  <p>
-    LevelUp is a not-for-profit initiative, run by ThoughtWorks volunteers
-    and industry professionals.
-  </p>
-  <p>
-    LevelUp Express conferences are single day events. </br>
-    LevelUp Build courses run 6 to 9 weeks.
-  </p>
-  <h6>
-    Powered-by <img src="/assets/images/tw-logo-white.png" width: "125"></img>
-  </h6>
+
+{% include site_hero.html subtitle=page.subtitle img="/assets/images/levelup-logo-web-orangered-white.png" %}
+<div id="event">
+  <section id="call-out">
+    <div class="call-to-action">
+          <div class="group">
+            <form id="get-updates" action="{{page.registration-url}}" method="post" name="mc-embedded-subscribe-form">
+              <div>
+                <label>Register and be the first to hear about upcoming LevelUp events</label>
+              </div>
+              <div class="form-group">
+                <input class="email" type="email" name="EMAIL" placeholder="Email Address"></input>
+              </div>
+              <div class="form-group">
+                <label for="LOCATION">Location</label>
+                <select name="LOCATION">
+                  {% for location in page.locations %}
+                      <option> {{ location }} </option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="form-group">
+                <input class="sign-up button" type="submit" value="Sign Up"></input>
+              </div>
+            </form>
+          </div>
+      </div>
+    <div class="outcome">
+      <p>
+        LevelUp is a series of classes, workshops and conferences for students
+        who want to add to their classroom learning with real-world experience.
+        Topics range from test-driven development, continuous delivery and pair
+        programming to Agile project management, business analysis and how
+        employers hire grads.
+      </p>
+      <p>
+        LevelUp is a not-for-profit initiative, run by ThoughtWorks volunteers
+        and industry professionals.
+      </p>
+      <p>
+        LevelUp Express conferences are single day events. </br>
+        LevelUp Build courses run 6 to 9 weeks.
+      </p>
+    </div>
+  </section>
+
+
+<section id="locations">
+  <div class="location-list">
+    {% for location in page.locations %}
+      <div class="location">
+        <h4 class="title">{{ location }}</h4>
+        <div class="register">
+          <a href="/{{ location }}/">Learn More</a>
+        </div>
+      </div>
+    {% endfor %}
+    <p> If you could not find your city in the list, please contact your
+      <a href= "http://www.thoughtworks.com/contact-us">local office</a>
+      for more information.
+    </p>
+  </div>
 </section>
 
 <section class="events">
@@ -41,25 +82,6 @@ registration-url: http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f4
         {% endif %}
       {% endfor %}
     </ul>
-  </div>
-</section>
-
-<section id="locations">
-  <h2>Regions</h2>
-  <div class="border-line"></div>
-  <div class="location-list">
-    {% for location in page.locations %}
-      <div class="location">
-        <h4 class="title">{{ location }}</h4>
-        <div class="register">
-          <a href="/{{ location }}/">Learn More</a>
-        </div>
-      </div>
-    {% endfor %}
-    <p> If you could not find your city in the list, please contact your
-      <a href= "http://www.thoughtworks.com/contact-us">local office</a>
-      for more information.
-    </p>
   </div>
 </section>
 

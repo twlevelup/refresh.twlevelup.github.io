@@ -1,12 +1,8 @@
 ---
 layout: default
 ---
-<section id="hero" class="{{ page.city }}">
-  <h1 class="boom">
-    {{ page.city }}
-  </h1>
-</section>
 
+{% include site_hero.html class=page.city title='LevelUp Events' subtitle=page.city %}
 {% include breadcrumbs.html %}
 
 <section class="events">

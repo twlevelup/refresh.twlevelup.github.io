@@ -2,17 +2,8 @@
 layout: default
 ---
 
-<section id="hero" class="{{ page.city }}">
-  <h1 class="boom">
-    {{ page.event }}
-    <div class="fa fa-rocket"></div>
-    <div class="light">
-      <em>{{ page.title }}</em>
-    </div>
-  </h1>
-</section>
-
-{% include breadcrumbs.html %}
+{% include site_hero.html class=page.city title=page.event subtitle=page.title %}
+{% include breadcrumbs.html%}
 
 <div id="event">
   <section id="call-out">

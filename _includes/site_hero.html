@@ -1,0 +1,15 @@
+<section class="hero" class="{{ include.class }}">
+  {% if include.img %}
+    <img src="{{ include.img }}"></img>
+  {% endif %}
+  {% if include.title %}
+    <h1 class="boom">
+      {{ include.title }}
+    </h1>
+  {% endif %}
+  {% if include.subtitle %}
+    <h2 class="light">
+      {{ include.subtitle }}
+    </h2>
+  {% endif %}
+</section>
