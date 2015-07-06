@@ -288,44 +288,6 @@ section#photos {
     width: 63%;
   }
 }
-section#previous-events {
-  .location {
-    padding: 30px 0 20px;
-    border-bottom: 1px solid #ccc;
-    &.last {
-      padding-bottom: 40px;
-      margin-bottom: 40px;
-    }
-    .left,
-    .right {
-      display: inline-block;
-      width: 30%;
-      vertical-align: top;
-      @media #{$pad-screen} {
-        width: 100%;
-      }
-    }
-    .right {
-      width: 60%;
-      text-align: left;
-      @media #{$pad-screen} {
-        text-align: center;
-        padding-top: 20px;
-      }
-    }
-    .title,
-    h2 {
-      margin: 0 0 5px;
-      padding-bottom: 0;
-    }
-    .event {
-      margin-bottom: 20px;
-    }
-    h3 {
-      font-weight: normal;
-    }
-  }
-}
 section#locations {
   max-width: 1024px;
   .location {
@@ -366,19 +328,19 @@ section#locations {
       border-left: none;
     }
   }
-  .current-event {
-    h2 {
-      padding-top: 40px;
-    }
-    .event {
-      &:nth-of-type(2) {
-        border-left: none;
-      }
-      .date {
-        padding-top: 15px;
-      }
-    }
-  }
+  // .current-event {
+  //   h2 {
+  //     padding-top: 40px;
+  //   }
+  //   .event {
+  //     &:nth-of-type(2) {
+  //       border-left: none;
+  //     }
+  //     .date {
+  //       padding-top: 15px;
+  //     }
+  //   }
+  // }
   .location-list {
     margin-bottom: 50px;
     .event:nth-of-type(1) {
@@ -391,53 +353,51 @@ section#locations {
     background-color: red;
     height: 20px;
   }
-  .upcoming-events {
-    li {
-      border-left: none;
-      width: 100%;
-      padding: 5px 5%;
-      clear: both;
-    }
-    li > * {
-      float: left;
-      padding: 5px 0.6em;
-      text-align: left;
-      width: 25%;
-      height: 50px;
-    }
-    .location,
-    .name {
-      @media #{$pad-screen} {
-        width: 30%;
-      }
-      @media #{$phone-screen} {
-        width: 50%;
-        text-align: center;
-      }
-    }
-    .date {
-      @media #{$pad-screen} {
-        width: 30%;
-        text-align: center;
-      }
-      @media #{$phone-screen} {
-        width: 90%;
-        height: 30px;
-        line-height: 20px;
-      }
-    }
-    .register {
-      margin-top: -30px;
-      text-align: right;
-      @media #{$pad-screen} {
-        width: 90%;
-        text-align: center;
-      }
-    }
-    button {
-      width: 30px;
-    }
-  }
+  // .upcoming-events {
+  //   li {
+  //     border-left: none;
+  //     width: 100%;
+  //     padding: 5px 5%;
+  //   }
+  //   li > * {
+  //     padding: 5px 0.6em;
+  //     text-align: left;
+  //     width: 25%;
+  //     height: 50px;
+  //   }
+  //   .location,
+  //   .name {
+  //     @media #{$pad-screen} {
+  //       width: 30%;
+  //     }
+  //     @media #{$phone-screen} {
+  //       width: 50%;
+  //       text-align: center;
+  //     }
+  //   }
+  //   .date {
+  //     @media #{$pad-screen} {
+  //       width: 30%;
+  //       text-align: center;
+  //     }
+  //     @media #{$phone-screen} {
+  //       width: 90%;
+  //       height: 30px;
+  //       line-height: 20px;
+  //     }
+  //   }
+  //   .register {
+  //     margin-top: -30px;
+  //     text-align: right;
+  //     @media #{$pad-screen} {
+  //       width: 90%;
+  //       text-align: center;
+  //     }
+  //   }
+  //   button {
+  //     width: 30px;
+  //   }
+  // }
   .earth-line {
     max-width: 500px;
     @media #{$phone-screen} {
@@ -465,26 +425,28 @@ section#locations {
     margin: 8px 0 0;
   }
 }
-section.events {
+.event-container {
   max-width: $screen-medium;
+  margin: auto;
   ul {
     padding:initial;
     list-style: none;
-    text-align: left;
     .event-details {
       div {
         padding: 10px;
         display: inline-block;
       }
       .event-location {
-        text-align: right;
-        min-width:25%;
+        min-width:15%;
+        text-align: left;
       }
-      .event-title {
-        max-width:40%;
+      .event-name {
+        width:40%;
+        text-align: left;
       }
       .event-date {
         width:25%;
+        text-align: right;
       }
     }
   }
@@ -492,7 +454,7 @@ section.events {
     ul {
       .event-details {
         margin: 10px;
-        .event-location, .event-title, .event-date{
+        .event-location, .event-name, .event-date{
           padding: initial;
           max-width: 100%;
           width: 100%;

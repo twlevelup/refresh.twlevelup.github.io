@@ -27,8 +27,24 @@ registration-url: http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f4
   </h6>
 </section>
 
+<section class="events">
+  <div class="event-container">
+    <h2>Upcoming Events</h2>
+    <div class="border-line"></div>
+    <ul class="event-list">
+      {% for event in site.pages | sort: 'date' %}
+        {% if event.layout == "event" and event.active %}
+          <li>
+            {% include event_detail.html location=true event=event %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
 <section id="locations">
-  <h2>Cities</h2>
+  <h2>Regions</h2>
   <div class="border-line"></div>
   <div class="location-list">
     {% for location in page.locations %}
@@ -39,13 +55,14 @@ registration-url: http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f4
         </div>
       </div>
     {% endfor %}
+    <p> If you could not find your city in the list, please contact your
+      <a href= "http://www.thoughtworks.com/contact-us">local office</a>
+      for more information.
+    </p>
   </div>
-<p>
-  If you could not find your city in the list, please contact your
-    <a href= "http://www.thoughtworks.com/contact-us">local office</a>
-  for more information.
-</p>
 </section>
+
+
 
 <section id="register">
   <form id="get-updates" action="{{page.registration-url}}" method="post" name="mc-embedded-subscribe-form">
@@ -64,19 +81,7 @@ registration-url: http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f4
   </form>
 </section>
 
-<section class="events">
-  <h2>Events</h2>
-  <div class="border-line"></div>
-  <ul class="event-list upcoming-events">
-    {% for event in site.pages | sort: 'date' %}
-      {% if event.layout == "event" %}
-        <li>
-          {% include event_detail.html location=true event=event %}
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</section>
+
 <section class="body-content">
   <h2>Frequently Asked Questions</h2>
   <div class="border-line"></div>

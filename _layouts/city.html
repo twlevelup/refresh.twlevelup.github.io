@@ -7,21 +7,24 @@ layout: default
   </h1>
 </section>
 
+<section class="events">
+  <div class="event-container">
+    <h2>Upcoming Events</h2>
+    <div class="border-line"></div>
+    <ul class="event-list">
+      {% for event in site.pages | sort: 'date' %}
+        {% if event.layout == "event" and event.city == page.city %}
+          <li>
+            {% include event_detail.html event=event %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
 <section id="city-information">
-  <h2>Overview</h2>
+  <h2>Previous {{ page.city }} Events</h2>
   <div class="border-line"></div>
   {{ content }}
-</section>
-<section class="events">
-  <h2>Events</h2>
-  <div class="border-line"></div>
-  <ul class="event-list upcoming-events">
-    {% for event in site.pages | sort: 'date' %}
-      {% if event.layout == "event" and event.city == page.city %}
-        <li>
-          {% include event_detail.html event=event %}
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
 </section>
