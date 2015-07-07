@@ -17,10 +17,10 @@ layout: default
       {% endif %}
       <div class="group">
         <div class="label"><i class="fa fa-map-marker"></i>Location</div>
-        <p><a href="http://www.thoughtworks.com/contact-us">ThoughtWorks {{ page.city }}</a></p>
+        <p><a href="{{ page.location.url }}">{{ page.location.description }}</a></p>
       </div>
-      {% if page.registration %}
-        {% include register.html open=page.registration.open %}
+      {% if page.registration.state %}
+        {% include register.html state=page.registration.state %}
       {% endif %}
     </div>
     <div class="outcome">
