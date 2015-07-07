@@ -10,7 +10,7 @@
 
    {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
   {% endfor %}
-  <span> {{ page.title }} </span>
+  <span> {{ include.title }} </span>
 </div>
 {% comment %}
 This cheeky bit of breadcrumbing is drawn from http://bit.ly/1IZLJGO
