@@ -396,28 +396,19 @@ section#locations {
     width:80%;
     .events-title {
       padding: 3px;
-
     }
     .event-list {
       padding: 5px;
-      // border-style: solid;
-      // border-radius: 5px;
-      // min-height: 100px;
     }
     .event-details {
       div {
         padding: 2px;
       }
-      .container-date {
-
-      }
-      .container-name {
-      }
     }
-
   }
 }
-.events.event-container {
+section.events {
+  .event-container {
   max-width: $screen-medium;
   margin: auto;
   ul {
@@ -456,6 +447,7 @@ section#locations {
       }
     }
   }
+}
 }
 section#testimonials {
   box-sizing: border-box;
@@ -691,13 +683,13 @@ section#faq {
     }
   }
 }
-// section.body-content {
-//   max-width: $screen-medium;
-//   text-align: left;
-//   h2 {
-//     text-align: center;
-//   }
-// }
+section.body-content {
+  max-width: $screen-medium;
+  text-align: left;
+  h2 {
+    text-align: center;
+  }
+}
 .dev-checklist {
   padding-left: 40px;
 }

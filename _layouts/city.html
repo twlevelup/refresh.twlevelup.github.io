@@ -2,28 +2,13 @@
 layout: default
 ---
 
-{% include site_hero.html class=page.city title='LevelUp Events' subtitle=page.city %}
+{% include site_hero.html class=page.city title=page.city subtitle='Overview' %}
 {% include breadcrumbs.html %}
-
+<div class="border-line"></div>
 <section class="events">
   <div class="event-container">
     <h2>Upcoming Events</h2>
-    <div class="border-line"></div>
-    <ul class="event-list">
-      {% assign sorted_pages = site.pages | sort: 'date' %}
-      {% for event in sorted_pages reversed %}
-        {% if event.layout == "event" and event.city == page.city %}
-          <li>
-            {% include event_detail.html event=event %}
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+      {% assign events = site.pages | sort: 'date' | filter_on: 'city', page.city | filter_on: 'layout', 'event' | filter_on: 'active', true  %}
+      {% include event_list.html events=events %}
   </div>
-</section>
-
-<section id="city-information">
-  <h2>Previous {{ page.city }} Events</h2>
-  <div class="border-line"></div>
-  {{ content }}
 </section>
