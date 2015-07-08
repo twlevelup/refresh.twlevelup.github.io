@@ -1,0 +1,6 @@
+$screen-small: 414px;
+$screen-medium: 768px;
+$screen-large: 960px;
+$phone-screen: "only screen and (max-width: #{$screen-small})";
+$pad-screen: "only screen and (max-width: #{$screen-medium})";
+$large-screen: "only screen and (min-width: #{$screen-large})";
