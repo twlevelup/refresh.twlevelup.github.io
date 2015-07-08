@@ -3,11 +3,10 @@
     {% if event.active %}
       <li>
         <div class="event-details">
+          <div class="event-date">{{ event.date | date: "%a %-d %b , %Y" }}</div>
           {% if event.active %}
-            <div class="event-date"><a href="{{ event.url }}">{{ event.date | date: "%a %-d %b , %Y" }}</a></div>
             <div class="event-name"><a href="{{ event.url }}">{{ event.event }} {{ event.title }}</a></div>
           {% else %}
-            <div class="event-date">{{ event.date | date: "%a %-d %b , %Y" }}</div>
             <div class="event-name">{{ event.event }} {{ event.title }}</div>
           {% endif %}
         </div>
