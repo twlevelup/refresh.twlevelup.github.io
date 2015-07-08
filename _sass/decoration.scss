@@ -6,13 +6,14 @@ $disabled-color: #b6b6b6;
 $border-line-colour:#f61f62;
 $border-secondary-line-colour:#c5c5c5;
 
-@mixin site-defaults-text {
+@mixin text-style_site-default {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 1em;
 }
 
-@mixin page-header-text {
+@mixin text-style_page-header {
+  text-align: center;
   font-size: 4em;
   letter-spacing: -0.07em;
   line-height: 1em;
@@ -24,21 +25,21 @@ $border-secondary-line-colour:#c5c5c5;
   }
 }
 
-@mixin page-subheader-text {
+@mixin text-style_page-subheader {
   font-weight: 300;
   font-size: 2em;
 }
 
-@mixin page-aside-text {
+@mixin text-style_page-aside {
   font-size: 1em;
 }
 
-@mixin section-header-text {
+@mixin text-style_section-header {
   font-weight: 300;
   font-size: 2em;
 }
 
-@mixin section-subheader-text {
+@mixin text-style_section-subheader {
   font-size: 1.2em;
   font-weight: 300;
   border-bottom: #F61F62;
@@ -47,7 +48,13 @@ $border-secondary-line-colour:#c5c5c5;
   border-bottom-width: 2px;
 }
 
-@mixin table-header-text {
+@mixin text-style_section-body {
+  line-height: 1.6em;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+@mixin text-style_table-header {
   font-size: 1.6em;
   font-weight: 300;
   border-bottom: #F61F62;
@@ -56,52 +63,42 @@ $border-secondary-line-colour:#c5c5c5;
   border-bottom-width: 3px;
 }
 
-@mixin section-body-text {
-  line-height: 1.6em;
-  font-weight: normal;
-  font-size: 1.2em;
-}
-
-@mixin callout-header-text {
+@mixin text-style_callout-header {
   border-bottom: 2px solid $primary-button-color;
-  @include page-subheader-text;
+  @include text-style_page-subheader;
 }
 
-@mixin callout-subheader-text {
+@mixin text-style_callout-subheader {
   font-weight: 300;
   font-size: 1em;
   border: none;
 }
 
-@mixin callout-normal-text {
+@mixin text-style_callout-body {
   font-size: 1.2em;
 }
 
-@mixin form-label-text {
+@mixin text-style_form-label {
   text-transform: uppercase;
   font-size: 0.8rem;
 }
 
-@mixin callout-value {
-  font-size: 1em;
-}
-
-@mixin form-input-text {
+@mixin text-style_form-input {
   font-size: 0.7em;
 }
 
 h1 {
-  @include page-header-text;
+  @include text-style_page-header;
 }
 h2 {
-  @include section-header-text;
+  @include text-style_section-header;
 }
 h3 {
-  @include section-subheader-text;
+  @include text-style_section-subheader;
 }
 
 body {
-  @include site-defaults-text;
+  @include text-style_site-default;
 }
 
 a {
@@ -115,10 +112,10 @@ a {
 .hero {
   color: white;
   h2 {
-    @include page-subheader-text;
+    @include text-style_page-subheader;
   }
   .powered-by {
-    @include page-aside-text;
+    @include text-style_page-aside;
   }
   background: #00bccd url("/assets/images/callout-pink.jpg") no-repeat center center;
   background-size: cover;
@@ -138,12 +135,12 @@ a {
 }
 
 section.call-out {
-  @include callout-normal-text;
+  @include text-style_callout-body;
   h2 {
-    @include callout-header-text;
+    @include text-style_callout-header;
   }
   h3 {
-    @include callout-subheader-text;
+    @include text-style_callout-subheader;
   }
   .call-to-action {
       background: lighten($primary-button-color, 41);
@@ -159,7 +156,7 @@ section.call-out {
 
 section.locations {
   h3 {
-    @include table-header-text;
+    @include text-style_table-header;
   }
 }
 section.agenda {
@@ -199,12 +196,12 @@ section.testimonials {
 form {
   .form-group {
     .label {
-      @include form-label-text;
+      @include text-style_form-label;
     }
     input,
     select,
     textarea {
-      @include form-input-text;
+      @include text-style_form-input;
     }
     input,
     textarea {
