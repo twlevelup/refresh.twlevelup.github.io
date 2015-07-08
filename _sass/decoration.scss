@@ -6,15 +6,102 @@ $disabled-color: #b6b6b6;
 $border-line-colour:#f61f62;
 $border-secondary-line-colour:#c5c5c5;
 
-
-body {
+@mixin site-defaults-text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  font-size: 1em;
 }
 
-h2 {
-  font-size: 2em;
+@mixin page-header-text {
+  font-size: 4em;
+  letter-spacing: -0.07em;
+  line-height: 1em;
+  &.tagline {
+    font-size: 2.5em;
+  }
+  @media #{$phone-screen} {
+    font-size: 2em;
+  }
+}
+
+@mixin page-subheader-text {
   font-weight: 300;
+  font-size: 2em;
+}
+
+@mixin page-aside-text {
+  font-size: 1em;
+}
+
+@mixin section-header-text {
+  font-weight: 300;
+  font-size: 2em;
+}
+
+@mixin section-subheader-text {
+  font-size: 1.2em;
+  font-weight: 300;
+  border-bottom: #F61F62;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 2px;
+}
+
+@mixin table-header-text {
+  font-size: 1.6em;
+  font-weight: 300;
+  border-bottom: #F61F62;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 3px;
+}
+
+@mixin section-body-text {
+  line-height: 1.6em;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+@mixin callout-header-text {
+  border-bottom: 2px solid $primary-button-color;
+  @include page-subheader-text;
+}
+
+@mixin callout-subheader-text {
+  font-weight: 300;
+  font-size: 1em;
+  border: none;
+}
+
+@mixin callout-normal-text {
+  font-size: 1.2em;
+}
+
+@mixin form-label-text {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+@mixin callout-value {
+  font-size: 1em;
+}
+
+@mixin form-input-text {
+  font-size: 0.7em;
+}
+
+h1 {
+  @include page-header-text;
+}
+h2 {
+  @include section-header-text;
+}
+h3 {
+  @include section-subheader-text;
+}
+
+body {
+  @include site-defaults-text;
 }
 
 a {
@@ -23,6 +110,135 @@ a {
   &:hover {
     color: darken($link-color, 15%);
   }
+}
+
+.hero {
+  color: white;
+  h2 {
+    @include page-subheader-text;
+  }
+  .powered-by {
+    @include page-aside-text;
+  }
+  background: #00bccd url("/assets/images/callout-pink.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  &.melbourne {
+    background-image: url("/assets/images/melbourne.jpg");
+  }
+  &.sydney {
+    background-image: url("/assets/images/sydney.jpg");
+  }
+  &.jozi {
+    background-image: url("/assets/images/jozi.jpg");
+  }
+  &.brisbane {
+    background-image: url("/assets/images/brisbane.jpg");
+  }
+}
+
+section.call-out {
+  @include callout-normal-text;
+  h2 {
+    @include callout-header-text;
+  }
+  h3 {
+    @include callout-subheader-text;
+  }
+  .call-to-action {
+      background: lighten($primary-button-color, 41);
+      border-radius: 5px;
+  }
+  @media #{$large-screen} {
+    &:before,
+    &:after {
+      content: '';
+    }
+  }
+}
+
+section.locations {
+  h3 {
+    @include table-header-text;
+  }
+}
+section.agenda {
+  .talk {
+    &+.talk {
+      border-top: 1px solid #ccc;
+    }
+    img {
+      border: 1px solid #c5c5c5;
+      border-radius: 100%;
+    }
+    &.break {
+      color: darkgrey;
+    }
+  }
+}
+
+section.testimonials {
+  .profile {
+    .quote {
+      background: #f3f3f3;
+      border: 1px solid white;
+      border-radius: 5px 0 5px 0;
+    }
+    .person {
+      font-weight: bold;
+    }
+    small {
+      color: #5c5c5c;
+    }
+    img {
+      border: 1px solid #c5c5c5;
+      border-radius: 100%;
+    }
+  }
+}
+form {
+  .form-group {
+    .label {
+      @include form-label-text;
+    }
+    input,
+    select,
+    textarea {
+      @include form-input-text;
+    }
+    input,
+    textarea {
+      border: 1px solid $input-border-color;
+      border-radius: 3px;
+      font-weight: normal;
+    }
+    select {
+      font-weight: normal;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+  input[type=submit] {
+    border: none;
+    &:disabled {
+      background-color: $disabled-color;
+    }
+  }
+}
+.registration {
+  .register-button {
+    &:hover {
+      color: white;
+    }
+    & + p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+ul.event-list {
+  list-style: none;
 }
 
 .border-line {
@@ -53,263 +269,5 @@ a {
   background-color: $info-button-color;
   &:hover {
     background-color: lighten($info-button-color, 10%);
-  }
-}
-
-.hero {
-  background: #00bccd url("/assets/images/callout-pink.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  h1.boom {
-    color: white;
-    font-size: 4em;
-    letter-spacing: -0.07em;
-    line-height: 1em;
-    &.tagline {
-      font-size: 2.5em;
-    }
-    @media #{$phone-screen} {
-      font-size: 2em;
-    }
-  }
-  h2 {
-    color: white;
-  }
-  &.melbourne {
-    background-image: url("/assets/images/melbourne.jpg");
-  }
-  &.sydney {
-    background-image: url("/assets/images/sydney.jpg");
-  }
-  &.jozi {
-    background-image: url("/assets/images/jozi.jpg");
-  }
-  &.brisbane {
-    background-image: url("/assets/images/brisbane.jpg");
-  }
-  p {
-    color: white;
-    font-size: 1.2em;
-  }
-  .powered-by {
-    color: white;
-    font-weight: normal;
-  }
-}
-
-section#call-out {
-  .outcome {
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8rem;
-    }
-    h2 {
-      border-bottom: 2px solid $primary-button-color;
-    }
-    > ul {
-      list-style-type: none;
-      li {
-        &:before {
-          content: '\f197';
-          font-family: FontAwesome;
-          color: $primary-button-color;
-          font-size: 0.8rem;
-        }
-      }
-    }
-  }
-  .call-to-action {
-      background: lighten($primary-button-color, 41);
-      border-radius: 5px;
-      .group {
-        h3 {
-          font-size: 1em;
-          font-weight: 500;
-        }
-        .label {
-          text-transform: uppercase;
-          font-size: 0.8rem;
-          color: lighten(black, 40);
-        }
-        p {
-          font-size: 1.2rem;
-        }
-      }
-  }
-  @media #{$large-screen} {
-    &:before,
-    &:after {
-      content: '';
-    }
-  }
-}
-
-section#about {
-  p {
-    line-height: 1.6em;
-    font-weight: normal;
-    font-size: 1.2em;
-  }
-}
-
-section#locations {
-  .location {
-    font-size: 1em;
-    h4 {
-      font-size: 1.6em;
-      font-weight: 300;
-      border-bottom: #F61F62;
-      border-style: solid;
-      border-width: 0;
-      border-bottom-width: 3px;
-    }
-    .name {
-      font-weight: 300;
-      color: #333;
-    }
-    .date {
-      font-style: italic;
-    }
-    .apply {
-      color: white;
-    }
-    .finished {
-      background-color: $disabled-color;
-    }
-  }
-  .test {
-    background-color: red;
-  }
-}
-
-.registration {
-  .register-button {
-    font-size: 1.2rem;
-    &:hover {
-      color: white;
-    }
-    & + p {
-      font-size: 0.8rem;
-    }
-  }
-}
-
-section.events {
-  .event-container {
-    ul {
-      list-style: none;
-    }
-  }
-}
-
-section#testimonials {
-  .profile {
-    .quote {
-      background: #f3f3f3;
-      border: 1px solid white;
-      border-radius: 5px 0 5px 0;
-    }
-    .person {
-      font-weight: bold;
-    }
-    small {
-      color: #5c5c5c;
-    }
-    img {
-      border: 1px solid #c5c5c5;
-      border-radius: 100%;
-    }
-  }
-}
-form {
-  .form-group {
-    label {
-      font-size: 1.1em;
-    }
-    input,
-    select,
-    textarea {
-      font-size: 1em;
-    }
-    input,
-    textarea {
-      border: 1px solid $input-border-color;
-      border-radius: 3px;
-      font-weight: normal;
-    }
-  }
-  input[type=submit] {
-    border: none;
-    &:disabled {
-      background-color: $disabled-color;
-    }
-  }
-  select {
-    font-weight: normal;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  .button {
-    font-size: 1.2em;
-  }
-}
-section.questions {
-  h3 {
-    font-size: 1em;
-    background-color: #fee8ef;
-    font-weight: 500;
-  }
-}
-
-section#reading-list {
-  .location {
-    border-bottom: 1px solid #ccc;
-    h3 {
-      font-size: 1em;
-      font-weight: normal;
-    }
-  }
-}
-
-section#schedule {
-  .talk {
-    &+.talk {
-      border-top: 1px solid #ccc;
-    }
-    img {
-      border: 1px solid #c5c5c5;
-      border-radius: 100%;
-    }
-    .presenter {
-      font-weight: normal;
-    }
-    &.break {
-      color: darkgrey;
-    }
-  }
-}
-#register {
-  .description {
-    line-height: 1.5em;
-  }
-}
-section#faq {
-  .questions {
-    .question {
-      font-weight: bold;
-      font-size: 1em;
-    }
-  }
-}
-section#talk {
-  .talk {
-    .speakerdeck {
-      background: transparent url("/assets/images/loading.gif") center center no-repeat;
-    }
-    .date {
-      color: darkgrey;
-      font-weight: normal;
-    }
   }
 }

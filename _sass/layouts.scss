@@ -87,7 +87,7 @@ footer {
     margin: 0 0 10px;
   }
 }
-section#call-out {
+section.call-out {
   padding: 30px 40px 0;
   .outcome {
     text-align: left;
@@ -189,7 +189,7 @@ section#photos {
   }
 }
 
-section#locations {
+section.locations {
   max-width: 1024px;
   .location {
     vertical-align: top;
@@ -298,7 +298,7 @@ section.events {
   }
 }
 
-section#testimonials {
+section.testimonials {
   box-sizing: border-box;
   margin: 0;
   max-width: 100%;
@@ -426,7 +426,7 @@ section#reading-list {
   }
 }
 
-section#schedule {
+section.agenda {
   .talk {
     padding: 20px 0;
     .left,

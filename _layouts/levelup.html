@@ -5,7 +5,7 @@ subtitle: Bridging the gap between university and the workplace
 ---
 
 {% include site_hero.html subtitle=page.subtitle img="/assets/images/levelup-logo-web-orangered-white.png" %}
-<section id="call-out">
+<section class="call-out">
   <div class="call-to-action">
     <div class="group">
       <form id="get-updates" action="{{page.registration-url}}" method="post" name="mc-embedded-subscribe-form">
@@ -16,7 +16,7 @@ subtitle: Bridging the gap between university and the workplace
           <input class="email" type="email" name="EMAIL" placeholder="Email Address"></input>
         </div>
         <div class="form-group">
-          <div class="label" for="LOCATION">Location </div> 
+          <div class="label" for="LOCATION">Location </div>
           <select name="LOCATION">
             {% for location in page.locations %}
                 <option> {{ location }} </option>
@@ -48,7 +48,7 @@ subtitle: Bridging the gap between university and the workplace
   </div>
 </section>
 <div class="border-line"></div>
-<section id="locations">
+<section class="locations">
   <h2 class="events-title">Upcoming events</h2>
   <p> If you can't find your city in the list, please contact your
     <a href= "http://www.thoughtworks.com/contact-us">local office</a>
@@ -57,7 +57,7 @@ subtitle: Bridging the gap between university and the workplace
   <div class="location-list">
     {% for location in page.locations %}
       <div class="location">
-        <h4 class="title"><a href="/{{ location }}/">{{ location }}</a></h4>
+        <h3 class="title"><a href="/{{ location }}/">{{ location }}</a></h3>
         <div class="event-container">
           {% assign events = site.pages | sort: 'date' | filter_on: 'city', location | filter_on: 'layout', 'event' | filter_on: 'active', true  %}
           {% include event_list_compact.html events=events %}
@@ -72,7 +72,7 @@ subtitle: Bridging the gap between university and the workplace
   {{ content }}
 </section>
 <div class="border-line"></div>
-<section id="testimonials">
+<section class="testimonials">
   <h2>What Our Students Have to Say</h2>
   <div class="profile">
     <div class="quote">
