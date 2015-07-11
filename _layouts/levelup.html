@@ -4,109 +4,122 @@ registration-url: http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f4
 subtitle: Bridging the gap between university and the workplace
 ---
 
-{% include site_hero.html subtitle=page.subtitle img="/assets/images/levelup-logo-web-orangered-white.png" %}
-<section class="call-out">
-  <div class="call-to-action">
-    <div class="group">
-      <form id="get-updates" action="{{page.registration-url}}" method="post" name="mc-embedded-subscribe-form">
-        <div class="form-group">
-          <h3>Register and be the first to hear about upcoming LevelUp events</h3>
-        </div>
-        <div class="form-group">
-          <input class="email" type="email" name="EMAIL" placeholder="Email Address"></input>
-        </div>
-        <div class="form-group">
-          <div class="label" for="LOCATION">Location </div>
-          <select name="LOCATION">
-            {% for location in page.locations %}
-                <option> {{ location }} </option>
-            {% endfor %}
-          </select>
-        </div>
-        <div class="form-group">
-          <input class="sign-up button" type="submit" value="Sign Up"></input>
-        </div>
-      </form>
+{% include site_hero.html subtitle=page.subtitle img="/assets/images/levelup-logo-web-orangered-white.png" imgalt="LevelUp logo" %}
+<div id="content">
+  <section id="registration-form" class="call-out">
+    <div id="about-levelup" class="outcome">
+      <p>
+        LevelUp is a series of classes, workshops and conferences for students
+        who want to add to their classroom learning with real-world experience.
+        Topics range from test-driven development, continuous delivery and pair
+        programming to Agile project management, business analysis and how
+        employers hire grads.
+      </p>
+      <p>
+        LevelUp is a not-for-profit initiative, run by ThoughtWorks volunteers
+        and industry professionals.
+      </p>
+      <p>
+        LevelUp Express conferences are single day events. </br>
+        LevelUp Build courses run 6 to 9 weeks.
+      </p>
     </div>
-  </div>
-  <div class="outcome">
-    <p>
-      LevelUp is a series of classes, workshops and conferences for students
-      who want to add to their classroom learning with real-world experience.
-      Topics range from test-driven development, continuous delivery and pair
-      programming to Agile project management, business analysis and how
-      employers hire grads.
-    </p>
-    <p>
-      LevelUp is a not-for-profit initiative, run by ThoughtWorks volunteers
-      and industry professionals.
-    </p>
-    <p>
-      LevelUp Express conferences are single day events. </br>
-      LevelUp Build courses run 6 to 9 weeks.
-    </p>
-  </div>
-</section>
-<div class="border-line"></div>
-<section class="locations">
-  <h2 class="events-title">Upcoming events</h2>
-  <p> If you can't find your city in the list, please contact your
-    <a href= "http://www.thoughtworks.com/contact-us">local office</a>
-    for more information.
-  </p>
-  <div class="location-list">
-    {% for location in page.locations %}
-      <div class="location">
-        <h3 class="title"><a href="/{{ location }}/">{{ location }}</a></h3>
-        <div class="event-container">
-          {% assign events = site.pages | sort: 'date' | filter_on: 'city', location | filter_on: 'layout', 'event' | filter_on: 'active', true  %}
-          {% include event_list_compact.html events=events %}
-        </div>
+    <div class="call-to-action">
+      <div class="group">
+        <form id="get-updates" action="{{page.registration-url}}" method="post" name="mc-embedded-subscribe-form">
+          <div class="form-group">
+            <h3 id="form-description">Register and be the first to hear about upcoming LevelUp events</h3>
+          </div>
+          <div class="form-group">
+            {% comment %}
+              use aria-labels for form inputs where a text label is not visible on the screen 
+            {% endcomment %}
+            <input aria-label="Email Address" class="email" type="email" name="EMAIL" placeholder="Email Address"></input>
+          </div>
+          <div class="form-group">
+            {% comment %}
+              aria-labelledby is for inputs that have a text label visible on the screen
+              needs to match the id of the text label
+            {% endcomment %}
+            <label class="label" for="LOCATION">Location </label>
+            <select id="location" name="LOCATION">
+              {% for location in page.locations %}
+                  <option value="{{ location }}"> {{ location }} </option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group">
+            <input aria-label="Sign up to receive updates about LevelUp" class="sign-up button" type="submit" value="Sign Up"></input>
+          </div>
+        </form>
       </div>
-    {% endfor %}
-  </div>
-</section>
-<section class="questions">
-  <h2>Frequently Asked Questions</h2>
-  {{ content }}
-</section>
-<section class="testimonials">
-  <h2>What Our Students Have to Say</h2>
-  <div class="profile">
-    <div class="quote">
-      "Love how the program is relaxed and not too corporate or formal. The
-      practical activities were really good for explaining concepts."
     </div>
-    <div class="person">
-      James
+  </section>
+  <div class="border-line"></div>
+  <section id="upcoming-events" class="locations">
+    <h2 class="events-title">Upcoming events</h2>
+    <p> If you can't find your city in the list, please contact your
+      <a href= "http://www.thoughtworks.com/contact-us">local office</a>
+      for more information.
+    </p>
+    <div class="location-list">
+      {% for location in page.locations %}
+        <div class="location">
+          <h3 class="title"><a href="/{{ location }}/">{{ location }}</a></h3>
+          <div class="event-container">
+            {% assign events = site.pages | sort: 'date' | filter_on: 'city', location | filter_on: 'layout', 'event' | filter_on: 'active', true  %}
+            {% include event_list_compact.html events=events %}
+          </div>
+        </div>
+      {% endfor %}
     </div>
-    <img src="./assets/images/man.jpg"></img>
-  </div>
-  <div class="profile">
-    <div class="quote">
-      "I came into LevelUp having done a lot of programming but no experience
-      with delivering software. I'd heard of Agile, but had no idea what it
-      involved. After completing the first LevelUp, an interviewer told me I'd
-      given a better run-down of Agile methodologies than developers who'd
-      spent ten years doing it."
+  </section>
+  <section id="faq" class="questions">
+    <h2>Frequently Asked Questions</h2>
+    {{ content }}
+  </section>
+  <section class="testimonials">
+    <h2>What Our Students Have to Say</h2>
+    <div class="profile">
+      <div class="quote">
+        "Love how the program is relaxed and not too corporate or formal. The
+        practical activities were really good for explaining concepts."
+      </div>
+      <div class="person">
+        James
+      </div>
+      <img src="./assets/images/man.jpg" alt="Picture of James"></img>
     </div>
-    <div class="person">
-      Max
+    <div class="profile">
+      <div class="quote">
+        "I came into LevelUp having done a lot of programming but no experience
+        with delivering software. I'd heard of Agile, but had no idea what it
+        involved. After completing the first LevelUp, an interviewer told me I'd
+        given a better run-down of Agile methodologies than developers who'd
+        spent ten years doing it."
+      </div>
+      <div class="person">
+        Max
+      </div>
+      <img src="./assets/images/max.jpg" alt="Picture of Max"></img>
     </div>
-    <img src="./assets/images/max.jpg"></img>
-  </div>
-</section>
-<section class="photos">
-  <h2>Real Experience</h2>
-  <img class="large" src="./assets/photos/9.jpg"></img>
-  <img class="small" src="./assets/photos/3.jpg"></img>
-  <img class="small" src="./assets/photos/4.jpg"></img>
-  <img class="large" src="./assets/photos/7.jpg"></img>
-  <img class="small" src="./assets/photos/10.jpg"></img>
-  <img class="small" src="./assets/photos/5.jpg"></img>
-  <img class="small" src="./assets/photos/2.jpg"></img>
-  <img class="large" src="./assets/photos/8.jpg"></img>
-  <img class="small" src="./assets/photos/6.jpg"></img>
-  <img class="small" src="./assets/photos/1.jpg"></img>
-  <div class="clearfix"></div>
-</section>
+  </section>
+  {% comment %}
+    Since these are just photos, they can be hidden from screen readers
+    unless there is some meaningful text or alt-text accompanying it
+  {% endcomment %}
+  <section aria-hidden="true" class="photos">
+    <h2>Real Experience</h2>
+    <img class="large" src="./assets/photos/9.jpg" alt=""></img>
+    <img class="small" src="./assets/photos/3.jpg" alt=""></img>
+    <img class="small" src="./assets/photos/4.jpg" alt=""></img>
+    <img class="large" src="./assets/photos/7.jpg" alt=""></img>
+    <img class="small" src="./assets/photos/10.jpg" alt=""></img>
+    <img class="small" src="./assets/photos/5.jpg" alt=""></img>
+    <img class="small" src="./assets/photos/2.jpg" alt=""></img>
+    <img class="large" src="./assets/photos/8.jpg" alt=""></img>
+    <img class="small" src="./assets/photos/6.jpg" alt=""></img>
+    <img class="small" src="./assets/photos/1.jpg" alt=""></img>
+    <div class="clearfix"></div>
+  </section>
+</div>

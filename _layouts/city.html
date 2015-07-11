@@ -4,11 +4,13 @@ layout: default
 
 {% include site_hero.html class=page.city title=page.city subtitle='Overview' %}
 {% include breadcrumbs.html title=page.city %}
-<div class="border-line"></div>
-<section class="events">
-  <div class="event-container">
-    <h2>Upcoming Events</h2>
-      {% assign events = site.pages | sort: 'date' | filter_on: 'city', page.city | filter_on: 'layout', 'event' | filter_on: 'active', true  %}
-      {% include event_list.html events=events %}
-  </div>
-</section>
+<div id="content">
+	<div class="border-line"></div>
+	<section class="events">
+	  <div class="event-container">
+	    <h2>Upcoming Events</h2>
+	      {% assign events = site.pages | sort: 'date' | filter_on: 'city', page.city | filter_on: 'layout', 'event' | filter_on: 'active', true  %}
+	      {% include event_list.html events=events %}
+	  </div>
+	</section>
+</div>

@@ -13,6 +13,10 @@
     %meta{:name => 'google-site-verification', :content => 'JfULntk-IIjEWdxvJDrNSghNUYUakzA6jiRt4tQYCZA'}
 
   %body
+    -# Skip links are for keyboard only users to quickly navigate past headers/navigation.
+    -# Users also return to them if they get lost on the page, so they need to be the first tabable
+    -# element in the DOM
+    %a.skip-link{:href => '#content'} Skip to Main Content
     %noscript
       %iframe{src: "//www.googletagmanager.com/ns.html?id=GTM-P97X8B", height: "0", width: "0", style: "display:none;visibility:hidden" }
     :javascript
@@ -43,4 +47,4 @@
 
       %div
         %a{href: "https://www.thoughtworks.com"}
-          %img.tw{src: '/assets/images/tw-logo.png'}
+          %img.tw{src: '/assets/images/tw-logo.png', alt: "ThoughtWorks logo"}

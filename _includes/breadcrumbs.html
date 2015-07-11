@@ -2,15 +2,15 @@
 {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
 {% assign previous="" %}
 <div class="breadcrumbs">
-    <span><a href="/"><span class="fa fa-rocket"></span> Home</a> | </span>
+    <span><a href="/"><span class="fa fa-rocket"></span> Home</a></span><span aria-hidden="true"> | </span>
   {% for unused in page.content spanmit:num_parts %}
    {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
    {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
-   <span><a href="{{previous}}">{{ first_word | capitalize }}</a> | </span>
+   <span><a href="{{previous}}">{{ first_word | capitalize }}</a></span><span aria-hidden="true"> | </span>
 
    {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
   {% endfor %}
-  <span> {{ include.title }} </span>
+  <span aria-label="Current page: {{ include.title }}"> {{ include.title }} </span>
 </div>
 {% comment %}
 This cheeky bit of breadcrumbing is drawn from http://bit.ly/1IZLJGO
