@@ -4,54 +4,49 @@ layout: default
 
 {% include site_hero.html class=page.city title=page.event subtitle=page.title %}
 {% include breadcrumbs.html title=page.event%}
-{% comment %}
-  Added #content div so that skip link can help keyboard only users navigate to 
-  the important information
-{% endcomment %}
-<div id="content">
-  <div id="event">
-    <section class="call-out">
-      {% comment %}
-        Rearranged the DOM so that it was in reading order (info before registration)
-      {% endcomment %}
-      <div class="outcome">
-        <h2>What's it all about?</h2>
-        <p class="description">
-          {% if page.description %}
-            {{ page.description }}
-          {% else %}
-            {{ site.data.cities[page.city].course.description}}
-          {% endif %}
-        </p>
-      </div>
-      <div class="call-to-action">
-        {% if page.key-dates %}
-          {% for item in page.key-dates %}
-            <div class="group">
-              <div class="label"><i class="fa fa-clock-o"></i>{{ item.name }}</div>
-              <p>{{ item.value }}</p>
-            </div>
-          {% endfor %}
-        {% endif %}
-        <div class="group">
-          <div class="label"><i class="fa fa-map-marker"></i>Location</div>
-          <p><a href="{{ page.location.url }}">{{ page.location.description }}</a></p>
-        </div>
-        {% if page.registration.state %}
-          {% include register.html state=page.registration.state %}
-        {% endif %}
-      </div>
-      
-    </section>
-      <div class="border-line"></div>
-      <section class="body-content">
-      <h2>Course information</h2>
-      {{ content }}
-    </section>
 
-    {% if page.schedule %}
-      {% include agenda.html agenda=page.schedule %}
-    {% endif %}
+<div id="event">
+  <section class="call-out">
+    {% comment %}
+      Rearranged the DOM so that it was in reading order (info before registration)
+    {% endcomment %}
+    <div class="outcome">
+      <h2>What's it all about?</h2>
+      <p class="description">
+        {% if page.description %}
+          {{ page.description }}
+        {% else %}
+          {{ site.data.cities[page.city].course.description}}
+        {% endif %}
+      </p>
+    </div>
+    <div class="call-to-action">
+      {% if page.key-dates %}
+        {% for item in page.key-dates %}
+          <div class="group">
+            <div class="label"><i class="fa fa-clock-o"></i>{{ item.name }}</div>
+            <p>{{ item.value }}</p>
+          </div>
+        {% endfor %}
+      {% endif %}
+      <div class="group">
+        <div class="label"><i class="fa fa-map-marker"></i>Location</div>
+        <p><a href="{{ page.location.url }}">{{ page.location.description }}</a></p>
+      </div>
+      {% if page.registration.state %}
+        {% include register.html state=page.registration.state %}
+      {% endif %}
+    </div>
 
-  </div>
+  </section>
+    <div class="border-line"></div>
+    <section class="body-content">
+    <h2>Course information</h2>
+    {{ content }}
+  </section>
+
+  {% if page.schedule %}
+    {% include agenda.html agenda=page.schedule %}
+  {% endif %}
+
 </div>
