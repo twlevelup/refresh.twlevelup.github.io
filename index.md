@@ -26,4 +26,4 @@ ThoughtWorks is always on the look out for talented people, please <a href="http
 ###Will there be food/drinks?
 LevelUp events are catered, just make sure you let us know about any dietary requirements when you register.
 ###I've still got questions, help?!
-If you can't find the answers send an e-mail to [levelup@thoughtworks.com](mailto:levelup@thoughtworks.com) and we'll do our best.
+If you can't find the answers send an email to [levelup@thoughtworks.com](mailto:levelup@thoughtworks.com) and we'll do our best.
