@@ -7,9 +7,11 @@
         you would have to add jquery to get 'a' to respond to keyboard shortcuts in the same
         way as 'button'
       {% endcomment %}
-      <button class="button register-button" href: "{{ include.registration.url }}", target: "_blank">
-        Count me in!
-      </button>
+      <a href="{{ page.registration.url }}" target="_blank">
+        <button class="button register-button">
+          Count me in!
+        </button>
+      </a>
       <p>It's free!</p>
     {% when 'pending' %}
       <p><strong>Registrations have not opened yet.</strong></p>
