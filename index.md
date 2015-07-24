@@ -1,7 +1,7 @@
 ---
 layout: levelup
 sitemap_priority: 1.0
-locations: [Sydney, Melbourne, Brisbane, Johannesburg]
+locations: [Sydney, Melbourne, Brisbane]
 ---
 ###How much does it cost to attend LevelUp?
 LevelUp events are completely free!
