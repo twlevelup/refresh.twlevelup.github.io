@@ -64,7 +64,7 @@ subtitle: Bridging the gap between university and the workplace
   <div class="location-list">
     {% for location in page.locations %}
       <div class="location">
-        <h3 class="title"><a href="/{{ location }}/">{{ location }}</a></h3>
+        <h3 class="title"><a href="/{{ location  | downcase  }}/">{{ location }}</a></h3>
         <div class="event-container">
           {% assign events = site.pages | sort: 'date' | filter_on: 'city', location | filter_on: 'layout', 'event' | filter_on: 'active', true  %}
           {% include event_list_compact.html events=events %}
