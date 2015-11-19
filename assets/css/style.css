@@ -1,0 +1,635 @@
+h1 {
+  text-align: center;
+  font-size: 4em;
+  letter-spacing: -0.07em;
+  line-height: 1em;
+}
+h1.tagline {
+  font-size: 2.5em;
+}
+@media only screen and (max-width: 414px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  border-bottom: #F61F62;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 2px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+a {
+  color: #f61f62;
+  text-decoration: none;
+}
+a:hover {
+  color: #c10841;
+}
+
+.hero {
+  color: white;
+  background: #00bccd url("/assets/images/callout-pink.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero h2 {
+  font-weight: 400;
+  font-size: 2em;
+}
+.hero .powered-by {
+  font-size: 1em;
+}
+.hero.melbourne {
+  background-image: url("/assets/images/melbourne.jpg");
+}
+.hero.sydney {
+  background-image: url("/assets/images/sydney.jpg");
+}
+.hero.jozi {
+  background-image: url("/assets/images/jozi.jpg");
+}
+.hero.brisbane {
+  background-image: url("/assets/images/brisbane.jpg");
+}
+
+section.call-out {
+  font-size: 1.2em;
+}
+section.call-out h2 {
+  border-bottom: 2px solid #f61f62;
+  font-weight: 400;
+  font-size: 2em;
+}
+section.call-out h3 {
+  font-weight: 300;
+  font-size: 1em;
+  border: none;
+}
+section.call-out .call-to-action {
+  background: #fee8ef;
+  border-radius: 5px;
+}
+section.call-out .call-to-action .label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+section.call-out .call-to-action p {
+  font-size: 0.9em;
+}
+@media only screen and (min-width: 960px) {
+  section.call-out:before, section.call-out:after {
+    content: '';
+  }
+}
+
+section.locations h3 {
+  font-size: 1.6em;
+  font-weight: 300;
+  border-bottom: #F61F62;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 3px;
+}
+
+section.agenda .talk + .talk {
+  border-top: 1px solid #ccc;
+}
+section.agenda .talk img {
+  border: 1px solid #c5c5c5;
+  border-radius: 100%;
+}
+section.agenda .talk.break {
+  color: darkgrey;
+}
+
+section.testimonials .profile .quote {
+  background: #f3f3f3;
+  border: 1px solid white;
+  border-radius: 5px 0 5px 0;
+}
+section.testimonials .profile .person {
+  font-weight: bold;
+}
+section.testimonials .profile small {
+  color: #5c5c5c;
+}
+section.testimonials .profile img {
+  border: 1px solid #c5c5c5;
+  border-radius: 100%;
+}
+
+form .form-group .label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+form .form-group input,
+form .form-group select,
+form .form-group textarea {
+  font-size: 0.7em;
+}
+form .form-group input,
+form .form-group textarea {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-weight: normal;
+}
+form .form-group select {
+  font-weight: normal;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form input[type=submit] {
+  border: none;
+}
+form input[type=submit]:disabled {
+  background-color: #b6b6b6;
+}
+
+.registration .register-button {
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+.registration .register-button:hover {
+  color: white;
+}
+.registration .register-button + p {
+  font-size: 0.8rem;
+}
+
+ul.event-list {
+  list-style: none;
+}
+
+.border-line {
+  border: 3px #f61f62 solid;
+  max-width: 600px;
+}
+@media only screen and (max-width: 414px) {
+  .border-line {
+    width: 100%;
+  }
+}
+
+.border-line.secondary {
+  border-color: #c5c5c5;
+}
+
+.button {
+  font-weight: normal;
+  border: 0;
+  border-radius: 5px;
+  background-color: #f61f62;
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #f85084;
+}
+
+.info-button {
+  background-color: #6dbb6f;
+}
+.info-button:hover {
+  background-color: #90cb91;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+h3 {
+  padding: 10px;
+}
+
+section,
+footer,
+header {
+  text-align: center;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 0;
+}
+footer .mascot {
+  margin-bottom: 50px;
+  max-width: 200px;
+}
+footer .social-links {
+  margin: 15px auto;
+  padding-bottom: 30px;
+}
+footer .social-links a {
+  padding: 0 15px;
+}
+footer .tw {
+  max-width: 200px;
+  margin-bottom: 45px;
+}
+
+.border-line {
+  margin: 30px auto;
+}
+@media only screen and (max-width: 414px) {
+  .border-line {
+    margin: 30px 0;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 0.55em 1.5em 0.75em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.hide {
+  display: none;
+}
+
+.hero {
+  max-width: 100%;
+  padding: 40px 10px;
+}
+
+section.call-out {
+  padding: 30px 40px 0;
+}
+section.call-out .outcome {
+  text-align: left;
+}
+section.call-out .outcome h2 {
+  padding: 40px 0 20px;
+  margin: 0;
+}
+section.call-out .call-to-action {
+  padding: 20px 15px 25px;
+  text-align: left;
+  margin: 0 -15px;
+}
+section.call-out .call-to-action .group h3 {
+  margin: 0;
+}
+section.call-out .call-to-action .group .label {
+  margin: 4px;
+}
+section.call-out .call-to-action .group .label > i {
+  padding-right: 2px;
+}
+section.call-out .call-to-action .group p {
+  padding-top: 0;
+  margin-top: 0;
+}
+section.call-out .call-to-action .group-register {
+  margin-top: 30px;
+}
+@media only screen and (min-width: 960px) {
+  section.call-out {
+    padding-bottom: 40px;
+  }
+  section.call-out:before, section.call-out:after {
+    clear: both;
+    display: table;
+  }
+  section.call-out .call-to-action {
+    width: 40%;
+    float: right;
+    margin: 0 0 0 4%;
+    padding: 30px;
+  }
+  section.call-out .outcome {
+    width: 56%;
+    float: left;
+    margin: 0;
+  }
+  section.call-out .outcome h2 {
+    text-align: left;
+    padding-left: 0;
+    margin: 0;
+  }
+}
+
+section.about {
+  margin: 0;
+  max-width: 100%;
+  padding: 40px;
+  width: 100%;
+}
+section.about .about-content {
+  max-width: 768px;
+  margin: 0 auto;
+}
+section.about p {
+  margin-bottom: 55px;
+}
+
+section.photos img {
+  float: left;
+  margin: 0 1.5% 3%;
+  overflow: hidden;
+}
+section.photos img.small {
+  margin-left: 0;
+  width: 31%;
+  float: right;
+}
+section.photos img.large {
+  margin-right: 0;
+  width: 63%;
+}
+
+section.locations .location {
+  vertical-align: top;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 200px;
+}
+section.locations .location .title,
+section.locations .location .name {
+  margin: 20px;
+}
+section.locations .location h4 {
+  padding-bottom: 10px;
+}
+section.locations .location .register {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  section.locations .location {
+    width: 100%;
+    float: none;
+  }
+}
+section.locations .location-list {
+  margin-bottom: 50px;
+}
+
+section.events .event-container {
+  max-width: 768px;
+  margin: auto;
+}
+section.events .event-container ul {
+  padding: initial;
+}
+section.events .event-container ul .event-details div {
+  padding: 10px;
+  display: inline-block;
+}
+section.events .event-container ul .event-details .event-location {
+  min-width: 15%;
+  text-align: left;
+}
+section.events .event-container ul .event-details .event-name {
+  width: 40%;
+  text-align: left;
+}
+section.events .event-container ul .event-details .event-date {
+  width: 25%;
+  text-align: right;
+}
+@media only screen and (max-width: 768px) {
+  section.events .event-container ul .event-details {
+    margin: 10px;
+  }
+  section.events .event-container ul .event-details .event-location, section.events .event-container ul .event-details .event-name, section.events .event-container ul .event-details .event-date {
+    padding: initial;
+    max-width: 100%;
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+section.testimonials {
+  box-sizing: border-box;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+section.testimonials .profile {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+}
+@media only screen and (max-width: 768px) {
+  section.testimonials .profile {
+    width: 100%;
+    display: block;
+    margin-bottom: 35px;
+  }
+}
+section.testimonials .profile .quote {
+  padding: 14px 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+section.testimonials .profile .person {
+  margin-top: 10px;
+}
+section.testimonials .profile small {
+  display: inline-block;
+  padding-top: 10px;
+}
+section.testimonials .profile img {
+  margin-top: 15px;
+  width: 120px;
+}
+
+form .form-group {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+form .form-group label {
+  margin-right: 20px;
+  text-align: left;
+  flex: 1 1 10%;
+}
+form .form-group input,
+form .form-group textarea {
+  flex: 1 1 auto;
+  padding: 9px;
+}
+@media only screen and (max-width: 414px) {
+  form .form-group input,
+  form .form-group textarea {
+    max-width: none;
+  }
+}
+form input[type=checkbox] {
+  width: 30px;
+}
+form input[type=submit] {
+  flex: none;
+  width: 200px;
+  max-width: 340px;
+  padding: 0.55em 1.5em 0.75em;
+}
+form select {
+  height: 34px;
+  padding: 6px 12px;
+}
+form .button {
+  margin: 15px auto;
+}
+@media only screen and (max-width: 414px) {
+  form .button {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+section.questions {
+  max-width: 960px;
+}
+section.questions h3 {
+  text-align: left;
+}
+section.questions p {
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.breadcrumbs {
+  padding: 10px;
+  margin-left: 20%;
+}
+
+.registration {
+  text-align: center;
+}
+.registration .register-button {
+  width: 100%;
+  margin: 0;
+}
+.registration p {
+  margin: 8px 0 0;
+}
+
+section.agenda .talk {
+  padding: 20px 0;
+}
+section.agenda .talk .left,
+section.agenda .talk .right {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+section.agenda .talk .right {
+  width: 60%;
+  text-align: left;
+}
+section.agenda .talk img {
+  margin-top: 15px;
+  height: 100px;
+  width: auto;
+}
+section.agenda .talk .title,
+section.agenda .talk .presenter {
+  margin: 0;
+  padding: 0;
+}
+section.agenda .talk .presenter {
+  margin-bottom: 15px;
+}
+
+#register {
+  max-width: 768px;
+}
+#register .description {
+  margin: 30px auto;
+}
+
+section.faq {
+  max-width: 768px;
+}
+section.faq .events {
+  text-align: left;
+}
+section.faq .questions {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: left;
+}
+section.faq .questions .question {
+  padding-bottom: 5px;
+}
+section.faq .questions .answer {
+  margin-bottom: 30px;
+}
+
+section.body-content {
+  max-width: 768px;
+  text-align: left;
+}
+section.body-content h2 {
+  text-align: center;
+}
+section.body-content p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.dev-checklist {
+  padding-left: 40px;
+}
+
+section.talk .talk {
+  margin-left: auto;
+  margin-right: auto;
+  width: 710px;
+  text-align: left;
+}
+section.talk .talk .date {
+  padding-left: 5px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
