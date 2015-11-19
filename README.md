@@ -21,15 +21,71 @@ GitHub pages doesn't support our deployment is a bit odd. `rake publish` first
 generates the site and then obliterates the existing origin/master replacing it
 with the generated code by `push --force`'ing.
 
-## Format of pages
+## Registering events
+The site makes use of markdown, front matter and templates to better standardise content, and to make updating events easier - ie. no writing html.
 
-Try to stick to an established standard. I think `location/event_type/event_number` seems to work well. Eg:
+### Key resources 
 
-    /sydney/course/3.haml
+_data\cities.yml 
 
-or:
+List of cities which host events. 
 
-    /johannesburg/exp/1.haml
+Add any new cities and types of events in the cities here. 
+You can set the default description for these events (specific to a city).  
+
+_layouts\
+
+Contains all of the layouts in use for the site. 
+
+Most of the the yml front-matter you assign in your content page will be used to populate the relevant layout. At the moment events use the event.html layout, but different ones can be added as needed. You just need to handle the front-matter in the layout.
+
+### Creating a new event
+**if the event type is new, or the city is new you'll need to update the cities.yml file first (see above)**
+
+- In the path for the city and event type create a new .md file . eg. `/sydney/course/3.md`
+
+Try to stick to the established standard: `location/event_type/event_number` as it becomes the route
+
+- Write the content.
+For the "event" template this will populate into the "course information" section of the "event" template
+
+- Set the yml front matter at the top of the markdown file. This will be used to populate the templates.
+
+The active flag should be set to false for finished events
+
+Registration can be set to one of three states: open, pending, closed. This will update the registration option on the site. 
+
+** Example below ** 
+```html
+---
+layout: event
+active: true
+type: course
+city: Melbourne
+event: LevelUp Build
+title:
+date: !!timestamp 2015-08-29
+location:
+  description: ThoughtWorks Melbourne<br /> Level 23, 303 Collins Street Melbourne, VIC 3000
+  url: https://www.google.com.au/maps/place/ThoughtWorks/@-37.816684,144.963962,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad642b48bb52925:0xbdc7c2910979075a
+registration:
+  state: open
+  url: http://goo.gl/forms/RpoNtpwoZp
+key-dates:
+  - name: Info Night
+    value: Tue 11 Aug 2015, 6:30pm - 7:30pm
+  - name: Kick Off
+    value: Sat 29 Aug 2015, 9am - 5pm
+  - name: Duration
+    value: 7 Weeks
+  - name: Regular Classes
+    value: Every Tuesday starting Tue 01 Sep 2015, 6pm - 9pm
+  - name: Final Showcase
+    value: Sat 17 Oct 2015
+---
+```
+
+Final note. Jekyll will generate and publish a static site. Unless you want to play with js (and feel free to), things like updating registration state require the site to be republished. 
 
 ## Accessbility notes
 
